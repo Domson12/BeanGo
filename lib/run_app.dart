@@ -27,7 +27,7 @@ Future<void> runMainApp() async {
   runApp(
     UncontrolledProviderScope(
       container: container,
-      child: MainApp(),
+      child: const MainApp(),
     ),
   );
 }
