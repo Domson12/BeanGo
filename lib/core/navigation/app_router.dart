@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:bean_go/features/onboarding/onboarding_page.dart';
 import 'package:flutter/cupertino.dart';
 
 import '../services/auth_service.dart';
@@ -8,14 +9,14 @@ part 'app_router.gr.dart';
 
 @AutoRouterConfig()
 class AppRouter extends _$AppRouter implements AutoRouteGuard {
-  AppRouter() {
-  }
 
   final List<String> notAuthorizedRoute = [
+    OnboardingRoute.name,
   ];
 
   @override
   List<AutoRoute> get routes => [
+    AutoRoute(page: OnboardingRoute.page, fullscreenDialog: true),
   ];
 
   @override
@@ -35,10 +36,13 @@ class AppRouter extends _$AppRouter implements AutoRouteGuard {
   // }
 
 
-  // Future<void> pushByType({required ScreenType type, Object? object}) async {
-  //   switch (type) {
-  //     default:
-  //       break;
-  //   }
-  // }
+  Future<void> pushByType({required ScreenType type, Object? object}) async {
+    switch (type) {
+      case ScreenType.onboarding:
+        await replaceAll([const OnboardingRoute()]);
+        break;
+      default:
+        break;
+    }
+  }
 }
