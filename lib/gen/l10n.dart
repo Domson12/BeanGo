@@ -59,6 +59,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Welcome to our cozy coffee corner, where every cup is a delightful for you.`
+  String get onboarding_desc_small {
+    return Intl.message(
+      'Welcome to our cozy coffee corner, where every cup is a delightful for you.',
+      name: 'onboarding_desc_small',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fall in Love with Coffee in Blissful Delight!`
+  String get onboarding_desc_big {
+    return Intl.message(
+      'Fall in Love with Coffee in Blissful Delight!',
+      name: 'onboarding_desc_big',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Get Started`
+  String get get_started {
+    return Intl.message(
+      'Get Started',
+      name: 'get_started',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
