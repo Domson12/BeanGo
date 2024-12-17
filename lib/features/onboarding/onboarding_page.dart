@@ -1,4 +1,6 @@
 import 'package:auto_route/annotations.dart';
+import 'package:auto_route/auto_route.dart';
+import 'package:bean_go/core/navigation/app_router.dart';
 import 'package:bean_go/core/utils/extensions.dart';
 import 'package:bean_go/core/widgets/bean_go_button.dart';
 import 'package:flutter/material.dart';
@@ -63,7 +65,7 @@ class OnboardingPage extends StatelessWidget {
                     child: BeanGoButton(
                       text: context.s.get_started,
                       onPressed: () {
-                        //TODO: navigate to next page
+                        context.router.push(const LoginRoute());
                       },
                     ),
                   ),

@@ -3,5 +3,10 @@
   "light": "Jasny",
   "onboarding_desc_small": "Welcome to our cozy coffee corner, where every cup is a delightful for you.",
   "onboarding_desc_big": "Fall in Love with Coffee in Blissful Delight!",
-  "get_started": "Get Started"
+  "get_started": "Get Started",
+  "email": "Email",
+  "password": "Password",
+  "login": "Login",
+  "welcome_back": "Welcome Back!",
+  "login_to_your_account": "Login to your account"
 }

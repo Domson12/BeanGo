@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:bean_go/features/onboarding/onboarding_page.dart';
-
+import 'package:bean_go/features/auth/login/login_page.dart';
 part 'app_router.gr.dart';
 
 @AutoRouterConfig(
@@ -11,5 +11,6 @@ class AppRouter extends RootStackRouter {
   @override
   List<AutoRoute> get routes => [
     AutoRoute(page: OnboardingRoute.page, initial: true),
+    AutoRoute(page: LoginRoute.page),
   ];
 }
