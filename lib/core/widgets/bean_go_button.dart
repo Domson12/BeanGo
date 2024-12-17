@@ -14,6 +14,7 @@ class BeanGoButton extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),
         ),
+        padding: const EdgeInsets.symmetric(vertical: 20),
       ),
       onPressed: onPressed,
       child: Text(
