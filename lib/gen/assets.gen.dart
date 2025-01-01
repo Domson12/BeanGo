@@ -22,12 +22,16 @@ class $AssetsFontsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/coffee_cup.png
+  AssetGenImage get coffeeCup =>
+      const AssetGenImage('assets/images/coffee_cup.png');
+
   /// File path: assets/images/onboarding.png
   AssetGenImage get onboarding =>
       const AssetGenImage('assets/images/onboarding.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [onboarding];
+  List<AssetGenImage> get values => [coffeeCup, onboarding];
 }
 
 class Assets {

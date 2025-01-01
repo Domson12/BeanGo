@@ -25,7 +25,7 @@ class LoginForm extends HookConsumerWidget {
             obscureText: true,
             hint: context.s.password,
           ),
-          SizedBox(height: 24),
+          SizedBox(height: 54),
           SizedBox(
             width: double.maxFinite,
             child: BeanGoButton(text: context.s.login, onPressed:() {

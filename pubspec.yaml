@@ -46,6 +46,7 @@ dependencies:
   infinite_scroll_pagination: ^4.0.0
   flutter_hooks: ^0.20.5
   hooks_riverpod: ^2.6.1
+  device_preview: ^1.2.0
 
 
 dev_dependencies:

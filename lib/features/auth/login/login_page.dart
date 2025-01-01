@@ -3,6 +3,8 @@ import "package:bean_go/core/utils/extensions.dart";
 import "package:bean_go/features/auth/login/widgets/login_form.dart";
 import "package:flutter/material.dart";
 
+import "../../../gen/assets.gen.dart";
+
 @RoutePage()
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -15,6 +17,7 @@ class LoginPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Assets.images.coffeeCup.image(),
             Text(
               context.s.welcome_back,
               style: context.textTheme.displayLarge,
@@ -24,7 +27,7 @@ class LoginPage extends StatelessWidget {
               context.s.login_to_your_account,
               style: context.textTheme.displaySmall,
             ),
-            const SizedBox(height: 54),
+            const SizedBox(height: 100),
             LoginForm(),
           ],
         ),
