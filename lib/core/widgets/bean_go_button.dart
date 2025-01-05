@@ -1,29 +1,101 @@
-import 'package:bean_go/core/utils/extensions.dart';
 import 'package:flutter/material.dart';
 
+import '../utils/extensions.dart';
+
 class BeanGoButton extends StatelessWidget {
-  const BeanGoButton({super.key, required this.text, required this.onPressed});
+  const BeanGoButton({
+    required this.text,
+    this.leading,
+    this.onPressed,
+    this.isLoading = false,
+    this.fillWidth = true,
+    this.variant = CustomElevatedVariant.primary,
+    this.leadingPosition = LeadingPosition.start,
+    this.compact = false,
+    this.zeroPadding = false,
+    super.key,
+  });
 
   final String text;
-  final VoidCallback onPressed;
+  final Widget? leading;
+  final VoidCallback? onPressed;
+  final bool isLoading;
+  final bool fillWidth;
+  final CustomElevatedVariant variant;
+  final LeadingPosition leadingPosition;
+  final bool compact;
+  final bool zeroPadding;
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
+    final backgroundColor = switch (variant) {
+      CustomElevatedVariant.primary => null,
+      CustomElevatedVariant.secondary => context.colors.secondaryBase,
+      CustomElevatedVariant.subtle => context.colors.outline,
+      // TODO: Handle this case.
+      CustomElevatedVariant.accent => throw UnimplementedError(),
+    };
+
+    final foregroundColor = switch (variant) {
+      CustomElevatedVariant.subtle => context.colors.outline,
+      CustomElevatedVariant.accent => context.colors.outline,
+      _ => null,
+    };
+
+    return SizedBox(
+      width: fillWidth ? double.maxFinite : null,
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          padding: EdgeInsets.symmetric(
+            vertical: zeroPadding
+                ? 0
+                : compact
+                ? 8
+                : 12,
+            horizontal: 16,
+          ),
+          disabledBackgroundColor: backgroundColor?.withOpacity(0.4),
+          disabledForegroundColor: foregroundColor?.withOpacity(0.4),
+          backgroundColor: backgroundColor,
+          foregroundColor: foregroundColor,
         ),
-        padding: const EdgeInsets.symmetric(vertical: 20),
-      ),
-      onPressed: onPressed,
-      child: Text(
-        text,
-        style: context.textTheme.bodyLarge?.copyWith(
-          color: Colors.white,
-          fontWeight: FontWeight.bold,
+        onPressed: isLoading ? null : onPressed,
+        child: isLoading
+            ? const CircularProgressIndicator()
+            : Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            if (leading != null) ...[
+              leading!,
+              if (leadingPosition == LeadingPosition.start)
+                const Spacer()
+              else
+                const SizedBox(width: 8),
+            ],
+            Text(text),
+            if (leading != null &&
+                leadingPosition == LeadingPosition.start) ...[
+              const Spacer(),
+              Opacity(
+                opacity: 0,
+                child: leading,
+              ),
+            ],
+          ],
         ),
       ),
     );
   }
+}
+
+enum CustomElevatedVariant {
+  primary,
+  secondary,
+  subtle,
+  accent,
+}
+
+enum LeadingPosition {
+  start,
+  center,
 }
