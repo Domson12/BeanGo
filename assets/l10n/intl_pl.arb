@@ -8,5 +8,7 @@
   "password": "Password",
   "login": "Login",
   "welcome_back": "Welcome Back!",
-  "login_to_your_account": "Login to your account"
+  "login_to_your_account": "Login to your account",
+  "sign_in": "Sign in",
+  "create_an_account": "Create an account"
 }

@@ -18,7 +18,7 @@ class TextDivider extends StatelessWidget {
         Expanded(
           child: Divider(
             height: 1,
-            color: AppTheme.colors.outline,
+            color: Colors.black,
           ),
         ),
         const SizedBox(width: 16),
@@ -32,7 +32,7 @@ class TextDivider extends StatelessWidget {
         Expanded(
           child: Divider(
             height: 1,
-            color: AppTheme.colors.outline,
+            color: Colors.black,
           ),
         ),
       ],

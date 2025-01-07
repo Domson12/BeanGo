@@ -12,25 +12,21 @@ class AuthSocialButtonRow extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return Row(
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         TextDivider(text: 'or'),
-        const SizedBox(height: 24),
+        const SizedBox(height: 16),
         if (Platform.isIOS) ...[
           AppleButton(
-            // onTap: () async => ref
-            //     .read(loginControllerProvider.notifier)
-            //     .loginApple(),
             onTap: () {
               //TODO: Implement Apple login
             },
           ),
+          const SizedBox(height: 16),
         ],
-        const SizedBox(height: 16),
         GoogleButton(
-          // onTap: () async => ref
-          //     .read(loginControllerProvider.notifier)
-          //     .loginGoogle(),
           onTap: () {
             //TODO: Implement Google login
           },

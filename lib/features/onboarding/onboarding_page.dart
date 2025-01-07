@@ -1,4 +1,3 @@
-import 'package:auto_route/annotations.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:bean_go/core/navigation/app_router.dart';
 import 'package:bean_go/core/utils/extensions.dart';
@@ -65,7 +64,7 @@ class OnboardingPage extends StatelessWidget {
                     child: BeanGoButton(
                       text: context.s.get_started,
                       onPressed: () {
-                        context.router.push(const LoginRoute());
+                        context.router.push(const AuthRoute());
                       },
                     ),
                   ),
