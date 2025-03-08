@@ -50,6 +50,106 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `Adres e-mail jest nieprawidłowy.`
+  String get invalidEmail {
+    return Intl.message(
+      'Adres e-mail jest nieprawidłowy.',
+      name: 'invalidEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `To konto zostało zablokowane.`
+  String get userDisabled {
+    return Intl.message(
+      'To konto zostało zablokowane.',
+      name: 'userDisabled',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Nie znaleziono użytkownika z tym adresem e-mail.`
+  String get userNotFound {
+    return Intl.message(
+      'Nie znaleziono użytkownika z tym adresem e-mail.',
+      name: 'userNotFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Nieprawidłowe hasło. Spróbuj ponownie.`
+  String get wrongPassword {
+    return Intl.message(
+      'Nieprawidłowe hasło. Spróbuj ponownie.',
+      name: 'wrongPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ten adres e-mail jest już używany.`
+  String get emailAlreadyInUse {
+    return Intl.message(
+      'Ten adres e-mail jest już używany.',
+      name: 'emailAlreadyInUse',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ta operacja nie jest dozwolona.`
+  String get operationNotAllowed {
+    return Intl.message(
+      'Ta operacja nie jest dozwolona.',
+      name: 'operationNotAllowed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hasło jest zbyt słabe.`
+  String get weakPassword {
+    return Intl.message(
+      'Hasło jest zbyt słabe.',
+      name: 'weakPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Zbyt wiele prób. Spróbuj ponownie później.`
+  String get tooManyRequests {
+    return Intl.message(
+      'Zbyt wiele prób. Spróbuj ponownie później.',
+      name: 'tooManyRequests',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Błąd sieci. Sprawdź swoje połączenie.`
+  String get networkError {
+    return Intl.message(
+      'Błąd sieci. Sprawdź swoje połączenie.',
+      name: 'networkError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wystąpił nieznany błąd. Spróbuj ponownie.`
+  String get unknownError {
+    return Intl.message(
+      'Wystąpił nieznany błąd. Spróbuj ponownie.',
+      name: 'unknownError',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Jasny`
   String get light {
     return Intl.message(
@@ -60,100 +160,100 @@ class S {
     );
   }
 
-  /// `Welcome to our cozy coffee corner, where every cup is a delightful for you.`
+  /// `Witamy w naszej przytulnej kawiarni, gdzie każda filiżanka to przyjemność dla Ciebie.`
   String get onboarding_desc_small {
     return Intl.message(
-      'Welcome to our cozy coffee corner, where every cup is a delightful for you.',
+      'Witamy w naszej przytulnej kawiarni, gdzie każda filiżanka to przyjemność dla Ciebie.',
       name: 'onboarding_desc_small',
       desc: '',
       args: [],
     );
   }
 
-  /// `Fall in Love with Coffee in Blissful Delight!`
+  /// `Zakochaj się w kawie w błogiej rozkoszy!`
   String get onboarding_desc_big {
     return Intl.message(
-      'Fall in Love with Coffee in Blissful Delight!',
+      'Zakochaj się w kawie w błogiej rozkoszy!',
       name: 'onboarding_desc_big',
       desc: '',
       args: [],
     );
   }
 
-  /// `Get Started`
+  /// `Zacznij`
   String get get_started {
     return Intl.message(
-      'Get Started',
+      'Zacznij',
       name: 'get_started',
       desc: '',
       args: [],
     );
   }
 
-  /// `Email`
+  /// `E-mail`
   String get email {
     return Intl.message(
-      'Email',
+      'E-mail',
       name: 'email',
       desc: '',
       args: [],
     );
   }
 
-  /// `Password`
+  /// `Hasło`
   String get password {
     return Intl.message(
-      'Password',
+      'Hasło',
       name: 'password',
       desc: '',
       args: [],
     );
   }
 
-  /// `Login`
+  /// `Zaloguj się`
   String get login {
     return Intl.message(
-      'Login',
+      'Zaloguj się',
       name: 'login',
       desc: '',
       args: [],
     );
   }
 
-  /// `Welcome Back!`
+  /// `Witamy ponownie!`
   String get welcome_back {
     return Intl.message(
-      'Welcome Back!',
+      'Witamy ponownie!',
       name: 'welcome_back',
       desc: '',
       args: [],
     );
   }
 
-  /// `Login to your account`
+  /// `Zaloguj się na swoje konto`
   String get login_to_your_account {
     return Intl.message(
-      'Login to your account',
+      'Zaloguj się na swoje konto',
       name: 'login_to_your_account',
       desc: '',
       args: [],
     );
   }
 
-  /// `Sign in`
+  /// `Zaloguj się`
   String get sign_in {
     return Intl.message(
-      'Sign in',
+      'Zaloguj się',
       name: 'sign_in',
       desc: '',
       args: [],
     );
   }
 
-  /// `Create an account`
+  /// `Utwórz konto`
   String get create_an_account {
     return Intl.message(
-      'Create an account',
+      'Utwórz konto',
       name: 'create_an_account',
       desc: '',
       args: [],
@@ -167,6 +267,7 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
   List<Locale> get supportedLocales {
     return const <Locale>[
       Locale.fromSubtags(languageCode: 'pl'),
+      Locale.fromSubtags(languageCode: 'en'),
     ];
   }
 

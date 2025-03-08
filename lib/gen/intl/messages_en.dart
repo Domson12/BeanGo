@@ -1,5 +1,5 @@
 // DO NOT EDIT. This is code generated via package:intl/generate_localized.dart
-// This is a library that provides messages for a pl locale. All the
+// This is a library that provides messages for a en locale. All the
 // messages from the main program should be duplicated here with the same
 // function name.
 
@@ -18,45 +18,44 @@ final messages = new MessageLookup();
 typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 
 class MessageLookup extends MessageLookupByLibrary {
-  String get localeName => 'pl';
+  String get localeName => 'en';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "create_an_account":
-            MessageLookupByLibrary.simpleMessage("Utwórz konto"),
-        "email": MessageLookupByLibrary.simpleMessage("E-mail"),
+            MessageLookupByLibrary.simpleMessage("Create an account"),
+        "email": MessageLookupByLibrary.simpleMessage("Email"),
         "emailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
-            "Ten adres e-mail jest już używany."),
-        "get_started": MessageLookupByLibrary.simpleMessage("Zacznij"),
+            "This email is already registered."),
+        "get_started": MessageLookupByLibrary.simpleMessage("Get Started"),
         "invalidEmail": MessageLookupByLibrary.simpleMessage(
-            "Adres e-mail jest nieprawidłowy."),
-        "light": MessageLookupByLibrary.simpleMessage("Jasny"),
-        "login": MessageLookupByLibrary.simpleMessage("Zaloguj się"),
+            "The email address is not valid."),
+        "light": MessageLookupByLibrary.simpleMessage("Light"),
+        "login": MessageLookupByLibrary.simpleMessage("Login"),
         "login_to_your_account":
-            MessageLookupByLibrary.simpleMessage("Zaloguj się na swoje konto"),
+            MessageLookupByLibrary.simpleMessage("Login to your account"),
         "networkError": MessageLookupByLibrary.simpleMessage(
-            "Błąd sieci. Sprawdź swoje połączenie."),
+            "Network error. Check your connection."),
         "onboarding_desc_big": MessageLookupByLibrary.simpleMessage(
-            "Zakochaj się w kawie w błogiej rozkoszy!"),
+            "Fall in Love with Coffee in Blissful Delight!"),
         "onboarding_desc_small": MessageLookupByLibrary.simpleMessage(
-            "Witamy w naszej przytulnej kawiarni, gdzie każda filiżanka to przyjemność dla Ciebie."),
+            "Welcome to our cozy coffee corner, where every cup is a delightful for you."),
         "operationNotAllowed": MessageLookupByLibrary.simpleMessage(
-            "Ta operacja nie jest dozwolona."),
-        "password": MessageLookupByLibrary.simpleMessage("Hasło"),
-        "sign_in": MessageLookupByLibrary.simpleMessage("Zaloguj się"),
+            "This operation is not allowed."),
+        "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "sign_in": MessageLookupByLibrary.simpleMessage("Sign in"),
         "tooManyRequests": MessageLookupByLibrary.simpleMessage(
-            "Zbyt wiele prób. Spróbuj ponownie później."),
+            "Too many requests. Try again later."),
         "unknownError": MessageLookupByLibrary.simpleMessage(
-            "Wystąpił nieznany błąd. Spróbuj ponownie."),
+            "An unknown error occurred. Please try again."),
         "userDisabled": MessageLookupByLibrary.simpleMessage(
-            "To konto zostało zablokowane."),
+            "This user has been disabled."),
         "userNotFound": MessageLookupByLibrary.simpleMessage(
-            "Nie znaleziono użytkownika z tym adresem e-mail."),
+            "No user found with this email."),
         "weakPassword":
-            MessageLookupByLibrary.simpleMessage("Hasło jest zbyt słabe."),
-        "welcome_back":
-            MessageLookupByLibrary.simpleMessage("Witamy ponownie!"),
+            MessageLookupByLibrary.simpleMessage("The password is too weak."),
+        "welcome_back": MessageLookupByLibrary.simpleMessage("Welcome Back!"),
         "wrongPassword": MessageLookupByLibrary.simpleMessage(
-            "Nieprawidłowe hasło. Spróbuj ponownie.")
+            "Incorrect password. Please try again.")
       };
 }
