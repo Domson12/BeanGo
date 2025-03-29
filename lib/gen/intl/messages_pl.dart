@@ -27,6 +27,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "onboarding_desc_big": MessageLookupByLibrary.simpleMessage(
             "Fall in Love with Coffee in Blissful Delight!"),
         "onboarding_desc_small": MessageLookupByLibrary.simpleMessage(
-            "Welcome to our cozy coffee corner, where every cup is a delightful for you.")
+            "Welcome to our cozy coffee corner, where every cup is a delightful for you."),
+        "onboarding_subtitle1": MessageLookupByLibrary.simpleMessage(
+            "Customize your own drink exactly how you like it by adding any topping you like!!!"),
+        "onboarding_subtitle2": MessageLookupByLibrary.simpleMessage(
+            "You can place your order quickly and easly without wasting time. You can also schedule orders via your smarthphone."),
+        "onboarding_subtitle3": MessageLookupByLibrary.simpleMessage(
+            "Exciting prizes await you! Redeem yours by collecting all the points after purchase in the app!"),
+        "onboarding_title1": MessageLookupByLibrary.simpleMessage(
+            "Choose and customize your Drinks"),
+        "onboarding_title2":
+            MessageLookupByLibrary.simpleMessage("Quickly and easly"),
+        "onboarding_title3":
+            MessageLookupByLibrary.simpleMessage("Get and Redeem Voucher")
       };
 }
