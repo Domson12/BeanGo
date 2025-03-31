@@ -1,4 +1,3 @@
-import '../../../gen/l10n.dart';
 
 enum ScreenType {
 onboarding,
