@@ -89,6 +89,66 @@ class S {
       args: [],
     );
   }
+
+  /// `Choose and customize your Drinks`
+  String get onboarding_title1 {
+    return Intl.message(
+      'Choose and customize your Drinks',
+      name: 'onboarding_title1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Customize your own drink exactly how you like it by adding any topping you like!!!`
+  String get onboarding_subtitle1 {
+    return Intl.message(
+      'Customize your own drink exactly how you like it by adding any topping you like!!!',
+      name: 'onboarding_subtitle1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Quickly and easly`
+  String get onboarding_title2 {
+    return Intl.message(
+      'Quickly and easly',
+      name: 'onboarding_title2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You can place your order quickly and easly without wasting time. You can also schedule orders via your smarthphone.`
+  String get onboarding_subtitle2 {
+    return Intl.message(
+      'You can place your order quickly and easly without wasting time. You can also schedule orders via your smarthphone.',
+      name: 'onboarding_subtitle2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Get and Redeem Voucher`
+  String get onboarding_title3 {
+    return Intl.message(
+      'Get and Redeem Voucher',
+      name: 'onboarding_title3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Exciting prizes await you! Redeem yours by collecting all the points after purchase in the app!`
+  String get onboarding_subtitle3 {
+    return Intl.message(
+      'Exciting prizes await you! Redeem yours by collecting all the points after purchase in the app!',
+      name: 'onboarding_subtitle3',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

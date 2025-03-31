@@ -3,5 +3,11 @@
   "light": "Jasny",
   "onboarding_desc_small": "Welcome to our cozy coffee corner, where every cup is a delightful for you.",
   "onboarding_desc_big": "Fall in Love with Coffee in Blissful Delight!",
-  "get_started": "Get Started"
+  "get_started": "Get Started",
+  "onboarding_title1": "Choose and customize your Drinks",
+  "onboarding_subtitle1": "Customize your own drink exactly how you like it by adding any topping you like!!!",
+  "onboarding_title2": "Quickly and easly",
+  "onboarding_subtitle2": "You can place your order quickly and easly without wasting time. You can also schedule orders via your smarthphone.",
+  "onboarding_title3": "Get and Redeem Voucher",
+  "onboarding_subtitle3": "Exciting prizes await you! Redeem yours by collecting all the points after purchase in the app!"
 }
