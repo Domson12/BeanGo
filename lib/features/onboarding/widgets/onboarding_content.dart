@@ -1,3 +1,6 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:bean_go/core/utils/defaults.dart';
+import 'package:bean_go/core/utils/extensions.dart';
 import 'package:flutter/material.dart';
 
 import '../../../gen/assets.gen.dart';
@@ -16,32 +19,51 @@ class OnboardingContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          RepaintBoundary(
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Align(
+          alignment: Alignment.center,
+          child: RepaintBoundary(
             child: image.image(
               alignment: Alignment.center,
-              fit: BoxFit.cover,
+              fit: BoxFit.contain,
+              width: 300,
+              height: 300,
             ),
           ),
-          const SizedBox(height: 32),
-          Text(
-            title,
-            style: Theme.of(context).textTheme.bodyLarge,
-          ),
-          const SizedBox(height: 8),
-          Text(
-            subtitle,
-            style: Theme.of(context).textTheme.bodySmall,
-            textAlign: TextAlign.center,
-          ),
-        ],
-      ),
+        ),
+        AppDefaults.gap24,
+        AnimatedTextKit(
+          isRepeatingAnimation: false,
+          animatedTexts: [
+            TypewriterAnimatedText(
+              title,
+              textStyle: Theme.of(context).textTheme.displayMedium,
+              speed: AppDefaults.shortestDuration,
+            ),
+          ],
+        ),
+       AppDefaults.gap8,
+        AnimatedTextKit(
+          isRepeatingAnimation: false,
+          animatedTexts: [
+            ColorizeAnimatedText(
+              subtitle,
+              textStyle: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                    fontSize: 14,
+                  ),
+              speed: AppDefaults.shortestDuration,
+              colors: [
+                context.colors.primaryText,
+                context.colors.secondaryText,
+                context.colors.primaryBase,
+              ],
+            ),
+          ],
+        ),
+      ],
     );
   }
 }

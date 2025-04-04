@@ -39,6 +39,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "onboarding_title2":
             MessageLookupByLibrary.simpleMessage("Quickly and easly"),
         "onboarding_title3":
-            MessageLookupByLibrary.simpleMessage("Get and Redeem Voucher")
+            MessageLookupByLibrary.simpleMessage("Get and Redeem Voucher"),
+        "skip": MessageLookupByLibrary.simpleMessage("Skip")
       };
 }

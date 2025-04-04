@@ -1,17 +1,13 @@
-import 'package:equatable/equatable.dart';
-
-class OnboardingState with EquatableMixin {
-  const OnboardingState({
-    required this.currentPage,
-  });
-
+class OnboardingState {
   final int currentPage;
 
-  factory OnboardingState.empty(){
-    return OnboardingState(currentPage: 0);
-  }
+  OnboardingState({required this.currentPage});
 
-  @override
-  // TODO: implement props
-  List<Object?> get props => throw UnimplementedError();
+  factory OnboardingState.empty() => OnboardingState(currentPage: 0);
+
+  OnboardingState copyWith({int? currentPage}) {
+    return OnboardingState(
+      currentPage: currentPage ?? this.currentPage,
+    );
+  }
 }
