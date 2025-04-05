@@ -1,73 +1,106 @@
 import 'package:auto_route/annotations.dart';
-import 'package:bean_go/core/utils/extensions.dart';
-import 'package:bean_go/core/widgets/bean_go_button.dart';
+import 'package:bean_go/core/utils/defaults.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../../gen/assets.gen.dart';
+import '../../core/widgets/onboarding_data.dart';
+import '../../core/utils/extensions.dart';
+import 'widgets/onboarding_bottom_section.dart';
+import 'widgets/onboarding_content.dart';
+import 'application/onboarding_controller.dart';
 
 @RoutePage()
-class OnboardingPage extends StatelessWidget {
+class OnboardingPage extends ConsumerStatefulWidget {
   const OnboardingPage({super.key});
 
   @override
+  ConsumerState<OnboardingPage> createState() => _OnboardingPageState();
+}
+
+class _OnboardingPageState extends ConsumerState<OnboardingPage> {
+  late final PageController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = PageController()
+      ..addListener(
+        () {
+          final currentPage = _controller.page?.round() ?? 0;
+          ref.read(onboardingControllerProvider.notifier).updateCurrentPage(
+                currentPage,
+              );
+        },
+      );
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  void skip() {
+    _controller.animateToPage(
+      onboardingItems(context).length - 1,
+      duration: AppDefaults.shortDuration,
+      curve: Curves.easeInOut,
+    );
+  }
+
+  @override
   Widget build(BuildContext context) {
-    //TODO: move to defaults
-    final mediaQuery = MediaQuery.of(context);
+    final items = onboardingItems(context);
 
     return Scaffold(
-      backgroundColor: Colors.transparent,
-      body: Stack(
-        fit: StackFit.expand,
+      body: Column(
         children: [
-          Positioned(
-            top: 0,
-            child: Assets.images.onboarding.image(
-              fit: BoxFit.cover,
-              width: mediaQuery.size.width,
+          SafeArea(
+            child: Align(
+              alignment: Alignment.centerRight,
+              child: Padding(
+                padding: const EdgeInsets.only(right: 16),
+                child: TextButton(
+                  onPressed: skip,
+                  child: Text(
+                    context.s.skip,
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                          fontSize: 14,
+                          color: context.colors.primaryText,
+                          fontWeight: FontWeight.w600,
+                          height: 1.4,
+                        ),
+                  ),
+                ),
+              ),
             ),
           ),
-          Positioned(
-            bottom: 50,
-            left: 0,
-            right: 0,
+          Expanded(
+            child: PageView.builder(
+              controller: _controller,
+              itemCount: items.length,
+              physics: const ClampingScrollPhysics(),
+              itemBuilder: (context, index) {
+                final data = items[index];
+                return Padding(
+                  padding: AppDefaults.paddingAll16,
+                  child: OnboardingContent(
+                    image: data.$1,
+                    title: data.$2,
+                    subtitle: data.$3,
+                  ),
+                );
+              },
+            ),
+          ),
+          SafeArea(
+            top: false,
+            minimum: const EdgeInsets.only(bottom: 50),
             child: Padding(
-              //TODO: move to defaults
-              padding: const EdgeInsets.symmetric(horizontal: 24),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Text(
-                    context.s.onboarding_desc_big,
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 40,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  //TODO: move to defaults
-                  const SizedBox(height: 8),
-                  Text(
-                    context.s.onboarding_desc_small,
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
-                    ),
-                  ),
-                  //TODO: move to defaults
-                  const SizedBox(height: 32),
-                  SizedBox(
-                    width: double.maxFinite,
-                    child: BeanGoButton(
-                      text: context.s.get_started,
-                      onPressed: () {
-                        //TODO: navigate to next page
-                      },
-                    ),
-                  ),
-                ],
+              padding: AppDefaults.paddingAll16,
+              child: OnboardingBottomSection(
+                controller: _controller,
+                count: items.length,
               ),
             ),
           ),
