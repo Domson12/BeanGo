@@ -27,7 +27,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "emailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
             "This email is already registered."),
+        "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
         "get_started": MessageLookupByLibrary.simpleMessage("Get Started"),
+        "google": MessageLookupByLibrary.simpleMessage("Google"),
         "invalidEmail": MessageLookupByLibrary.simpleMessage(
             "The email address is not valid."),
         "light": MessageLookupByLibrary.simpleMessage("Light"),
@@ -36,14 +38,19 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Login to your account"),
         "networkError": MessageLookupByLibrary.simpleMessage(
             "Network error. Check your connection."),
+        "next": MessageLookupByLibrary.simpleMessage("Next"),
         "onboarding_desc_big": MessageLookupByLibrary.simpleMessage(
             "Fall in Love with Coffee in Blissful Delight!"),
         "onboarding_desc_small": MessageLookupByLibrary.simpleMessage(
             "Welcome to our cozy coffee corner, where every cup is a delightful for you."),
         "operationNotAllowed": MessageLookupByLibrary.simpleMessage(
             "This operation is not allowed."),
+        "or": MessageLookupByLibrary.simpleMessage("or"),
+        "or_create_account": MessageLookupByLibrary.simpleMessage(
+            ", or create a new account today!"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "sign_in": MessageLookupByLibrary.simpleMessage("Sign in"),
+        "sign_in_with": MessageLookupByLibrary.simpleMessage("Sign in with"),
         "tooManyRequests": MessageLookupByLibrary.simpleMessage(
             "Too many requests. Try again later."),
         "unknownError": MessageLookupByLibrary.simpleMessage(

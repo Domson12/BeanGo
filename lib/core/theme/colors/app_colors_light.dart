@@ -10,7 +10,8 @@ class AppColorsLight implements AppColors {
   Color get primaryMain => const Color(0xFFA85C3E);
 
   @override
-  Color get primaryDark => const Color(0xFFA85C3E);
+  //5D4037
+  Color get primaryDark => const Color(0xFF5D4037);
 
   @override
   Color get secondaryLight => const Color(0xFFFFEBEB);

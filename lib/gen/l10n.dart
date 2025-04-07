@@ -160,31 +160,101 @@ class S {
     );
   }
 
-  /// `Witamy w naszej przytulnej kawiarni, gdzie każda filiżanka to przyjemność dla Ciebie.`
+  /// `Welcome to our cozy coffee corner, where every cup is a delightful for you.`
   String get onboarding_desc_small {
     return Intl.message(
-      'Witamy w naszej przytulnej kawiarni, gdzie każda filiżanka to przyjemność dla Ciebie.',
+      'Welcome to our cozy coffee corner, where every cup is a delightful for you.',
       name: 'onboarding_desc_small',
       desc: '',
       args: [],
     );
   }
 
-  /// `Zakochaj się w kawie w błogiej rozkoszy!`
+  /// `Fall in Love with Coffee in Blissful Delight!`
   String get onboarding_desc_big {
     return Intl.message(
-      'Zakochaj się w kawie w błogiej rozkoszy!',
+      'Fall in Love with Coffee in Blissful Delight!',
       name: 'onboarding_desc_big',
       desc: '',
       args: [],
     );
   }
 
-  /// `Zacznij`
+  /// `Get Started`
   String get get_started {
     return Intl.message(
-      'Zacznij',
+      'Get Started',
       name: 'get_started',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose and customize your Drinks`
+  String get onboarding_title1 {
+    return Intl.message(
+      'Choose and customize your Drinks',
+      name: 'onboarding_title1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Customize your own drink exactly how you like it by adding any topping you like!!!`
+  String get onboarding_subtitle1 {
+    return Intl.message(
+      'Customize your own drink exactly how you like it by adding any topping you like!!!',
+      name: 'onboarding_subtitle1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Quickly and easly`
+  String get onboarding_title2 {
+    return Intl.message(
+      'Quickly and easly',
+      name: 'onboarding_title2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You can place your order quickly and easly without wasting time. You can also schedule orders via your smarthphone.`
+  String get onboarding_subtitle2 {
+    return Intl.message(
+      'You can place your order quickly and easly without wasting time. You can also schedule orders via your smarthphone.',
+      name: 'onboarding_subtitle2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Get and Redeem Voucher`
+  String get onboarding_title3 {
+    return Intl.message(
+      'Get and Redeem Voucher',
+      name: 'onboarding_title3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Exciting prizes await you! Redeem yours by collecting all the points after purchase in the app!`
+  String get onboarding_subtitle3 {
+    return Intl.message(
+      'Exciting prizes await you! Redeem yours by collecting all the points after purchase in the app!',
+      name: 'onboarding_subtitle3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Skip`
+  String get skip {
+    return Intl.message(
+      'Skip',
+      name: 'skip',
       desc: '',
       args: [],
     );
@@ -250,11 +320,71 @@ class S {
     );
   }
 
-  /// `Utwórz konto`
+  /// `Create an account`
   String get create_an_account {
     return Intl.message(
-      'Utwórz konto',
+      'Create an account',
       name: 'create_an_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next`
+  String get next {
+    return Intl.message(
+      'Next',
+      name: 'next',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign in with`
+  String get sign_in_with {
+    return Intl.message(
+      'Sign in with',
+      name: 'sign_in_with',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Google`
+  String get google {
+    return Intl.message(
+      'Google',
+      name: 'google',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `or`
+  String get or {
+    return Intl.message(
+      'or',
+      name: 'or',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Facebook`
+  String get facebook {
+    return Intl.message(
+      'Facebook',
+      name: 'facebook',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `, or create a new account today!`
+  String get or_create_account {
+    return Intl.message(
+      ', or create a new account today!',
+      name: 'or_create_account',
       desc: '',
       args: [],
     );

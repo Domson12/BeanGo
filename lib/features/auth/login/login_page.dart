@@ -1,4 +1,5 @@
 import "package:auto_route/annotations.dart";
+import "package:bean_go/core/utils/defaults.dart";
 import "package:bean_go/core/utils/extensions.dart";
 import "package:bean_go/features/auth/login/widgets/login_form.dart";
 import "package:flutter/material.dart";
@@ -12,17 +13,18 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24),
+        padding: AppDefaults.paddingHorizontal16,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Assets.images.coffeeCup.image(),
+            Assets.images.logo.image(),
             Text(
               context.s.welcome_back,
               style: context.textTheme.displayLarge,
             ),
-            const SizedBox(height: 16),
+            AppDefaults.gap16,
             Text(
               context.s.login_to_your_account,
               style: context.textTheme.displaySmall,

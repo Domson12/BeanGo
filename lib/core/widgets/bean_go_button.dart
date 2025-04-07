@@ -29,7 +29,7 @@ class BeanGoButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final backgroundColor = switch (variant) {
-      CustomElevatedVariant.primary => null,
+      CustomElevatedVariant.primary => context.colors.primaryDark,
       CustomElevatedVariant.secondary => context.colors.secondaryBase,
       CustomElevatedVariant.subtle => context.colors.outline,
       // TODO: Handle this case.
@@ -46,16 +46,29 @@ class BeanGoButton extends StatelessWidget {
       width: fillWidth ? double.maxFinite : null,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16),
+          ),
           padding: EdgeInsets.symmetric(
             vertical: zeroPadding
                 ? 0
                 : compact
-                ? 8
-                : 12,
+                    ? 8
+                    : 12,
             horizontal: 16,
           ),
-          disabledBackgroundColor: backgroundColor?.withOpacity(0.4),
-          disabledForegroundColor: foregroundColor?.withOpacity(0.4),
+          disabledBackgroundColor: backgroundColor.withValues(
+            alpha: 0.4,
+            red: 0,
+            green: 0,
+            blue: 0,
+          ),
+          disabledForegroundColor: foregroundColor?.withValues(
+            alpha: 0.4,
+            red: 0,
+            green: 0,
+            blue: 0,
+          ),
           backgroundColor: backgroundColor,
           foregroundColor: foregroundColor,
         ),
@@ -63,26 +76,26 @@ class BeanGoButton extends StatelessWidget {
         child: isLoading
             ? const CircularProgressIndicator()
             : Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            if (leading != null) ...[
-              leading!,
-              if (leadingPosition == LeadingPosition.start)
-                const Spacer()
-              else
-                const SizedBox(width: 8),
-            ],
-            Text(text),
-            if (leading != null &&
-                leadingPosition == LeadingPosition.start) ...[
-              const Spacer(),
-              Opacity(
-                opacity: 0,
-                child: leading,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  if (leading != null) ...[
+                    leading!,
+                    if (leadingPosition == LeadingPosition.start)
+                      const Spacer()
+                    else
+                      const SizedBox(width: 8),
+                  ],
+                  Text(text),
+                  if (leading != null &&
+                      leadingPosition == LeadingPosition.start) ...[
+                    const Spacer(),
+                    Opacity(
+                      opacity: 0,
+                      child: leading,
+                    ),
+                  ],
+                ],
               ),
-            ],
-          ],
-        ),
       ),
     );
   }

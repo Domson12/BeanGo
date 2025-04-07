@@ -1,5 +1,7 @@
 import 'dart:io';
 
+import 'package:bean_go/core/utils/defaults.dart';
+import 'package:bean_go/core/utils/extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -16,15 +18,15 @@ class AuthSocialButtonRow extends ConsumerWidget {
       mainAxisSize: MainAxisSize.min,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        TextDivider(text: 'or'),
-        const SizedBox(height: 16),
+        TextDivider(text: context.s.or),
+        AppDefaults.gap16,
         if (Platform.isIOS) ...[
           AppleButton(
             onTap: () {
               //TODO: Implement Apple login
             },
           ),
-          const SizedBox(height: 16),
+          AppDefaults.gap16,
         ],
         GoogleButton(
           onTap: () {

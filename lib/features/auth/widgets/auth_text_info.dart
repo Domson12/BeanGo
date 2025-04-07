@@ -13,52 +13,32 @@ class AuthTextInfo extends StatelessWidget {
           style: TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.w500,
-            color: Colors.brown[800], // Coffee-themed color
-            fontFamily: 'Roboto', // Adjust to match your app's font style
+            color: Colors.brown[800],
+            fontFamily: 'Poppins',
           ),
           children: [
             TextSpan(
-              text: "Welcome to ",
-              style: TextStyle(color: Colors.brown[600]),
+              text: context.s.sign_in_with,
             ),
             TextSpan(
-              text: "BeanGo\n",
+              text: context.s.google,
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: 30,
-                color: context.colors.primaryDark,
+                color: context.colors.primaryMain,
               ),
             ),
             TextSpan(
-              text: "Get your coffee on the go!\n\n",
-              style: TextStyle(
-                fontStyle: FontStyle.italic,
-                fontSize: 18,
-                color: context.colors.primaryDark,
-              ),
+              text: context.s.or,
             ),
             TextSpan(
-              text: "Sign in with ",
-            ),
-            TextSpan(
-              text: "Google",
+              text: context.s.facebook,
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: context.colors.primaryDark,
+                color: context.colors.primaryMain,
               ),
             ),
             TextSpan(
-              text: " or ",
-            ),
-            TextSpan(
-              text: "Facebook",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: context.colors.primaryDark,
-              ),
-            ),
-            TextSpan(
-              text: ", or create a new account today!",
+              text: context.s.or_create_account,
             ),
           ],
         ),

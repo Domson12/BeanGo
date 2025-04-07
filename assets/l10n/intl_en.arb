@@ -21,5 +21,11 @@
   "welcome_back": "Welcome Back!",
   "login_to_your_account": "Login to your account",
   "sign_in": "Sign in",
-  "create_an_account": "Create an account"
+  "create_an_account": "Create an account",
+  "next": "Next",
+  "sign_in_with": "Sign in with",
+  "google": "Google",
+  "or": "or",
+  "facebook": "Facebook",
+  "or_create_account": ", or create a new account today!"
 }
