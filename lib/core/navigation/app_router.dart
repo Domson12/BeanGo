@@ -4,6 +4,7 @@ import 'package:bean_go/features/auth/login/login_page.dart';
 import 'package:flutter/material.dart';
 
 import '../../features/auth/auth_page.dart';
+import '../../features/auth/register/register_page.dart';
 part 'app_router.gr.dart';
 
 @AutoRouterConfig(
@@ -29,5 +30,6 @@ class AppRouter extends RootStackRouter {
           },
         ),
         AutoRoute(page: LoginRoute.page),
+        AutoRoute(page: RegisterRoute.page),
       ];
 }

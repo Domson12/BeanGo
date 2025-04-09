@@ -32,5 +32,10 @@
   "continue_with_apple": "Continue with Apple",
   "dont_have_an_acount": "Don't have an account?",
   "have_an_account": "Have an account?",
-  "register": "Register"
+  "register": "Register",
+  "confirm_password": "Confirm Password",
+  "by_taping_register": "By tapping \"Register\" you agree to",
+  "terms_of_use": "Terms of Use",
+  "and": "and",
+  "privacy_policy": "Privacy Policy"
 }
