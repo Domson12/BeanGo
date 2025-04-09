@@ -22,6 +22,11 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "and": MessageLookupByLibrary.simpleMessage("and"),
+        "by_taping_register": MessageLookupByLibrary.simpleMessage(
+            "By tapping \"Register\" you agree to"),
+        "confirm_password":
+            MessageLookupByLibrary.simpleMessage("Confirm Password"),
         "continue_with_apple":
             MessageLookupByLibrary.simpleMessage("Continue with Apple"),
         "continue_with_google":
@@ -57,9 +62,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "or_create_account": MessageLookupByLibrary.simpleMessage(
             ", or create a new account today!"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "privacy_policy":
+            MessageLookupByLibrary.simpleMessage("Privacy Policy"),
         "register": MessageLookupByLibrary.simpleMessage("Register"),
         "sign_in": MessageLookupByLibrary.simpleMessage("Sign in"),
         "sign_in_with": MessageLookupByLibrary.simpleMessage("Sign in with"),
+        "terms_of_use": MessageLookupByLibrary.simpleMessage("Terms of Use"),
         "tooManyRequests": MessageLookupByLibrary.simpleMessage(
             "Too many requests. Try again later."),
         "unknownError": MessageLookupByLibrary.simpleMessage(

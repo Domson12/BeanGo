@@ -38,7 +38,9 @@ class AuthPage extends StatelessWidget {
               BeanGoButton(
                 text: context.s.create_an_account,
                 onPressed: () {
-                  //TODO: Implement create an account
+                  context.router.push(
+                    const RegisterRoute(),
+                  );
                 },
               ),
               AppDefaults.gap32,

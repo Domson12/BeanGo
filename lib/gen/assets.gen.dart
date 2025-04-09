@@ -12,11 +12,14 @@ import 'package:flutter/widgets.dart';
 class $AssetsFontsGen {
   const $AssetsFontsGen();
 
+  /// File path: assets/fonts/Poppins-Bold.ttf
+  String get poppinsBold => 'assets/fonts/Poppins-Bold.ttf';
+
   /// File path: assets/fonts/Sora.ttf
   String get sora => 'assets/fonts/Sora.ttf';
 
   /// List of all assets
-  List<String> get values => [sora];
+  List<String> get values => [poppinsBold, sora];
 }
 
 class $AssetsImagesGen {

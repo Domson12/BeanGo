@@ -440,6 +440,55 @@ class S {
     );
   }
 
+  /// `Confirm Password`
+  String get confirm_password {
+    return Intl.message(
+      'Confirm Password',
+      name: 'confirm_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `By tapping "Register" you agree to`
+  String get by_taping_register {
+    return Intl.message(
+      'By tapping "Register" you agree to',
+      name: 'by_taping_register',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Terms of Use`
+  String get terms_of_use {
+    return Intl.message(
+      'Terms of Use',
+      name: 'terms_of_use',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `and`
+  String get and {
+    return Intl.message(
+      'and',
+      name: 'and',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Privacy Policy`
+  String get privacy_policy {
+    return Intl.message(
+      'Privacy Policy',
+      name: 'privacy_policy',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

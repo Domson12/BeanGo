@@ -1,3 +1,4 @@
+import 'package:bean_go/core/utils/defaults.dart';
 import 'package:bean_go/core/utils/extensions.dart';
 import 'package:bean_go/core/widgets/bean_go_button.dart';
 import 'package:bean_go/core/widgets/custom_text_form_field.dart';
@@ -13,10 +14,23 @@ class LoginForm extends HookConsumerWidget {
     final formKey = useMemoized(GlobalKey<FormState>.new);
     final emailController = useTextEditingController();
     final passwordController = useTextEditingController();
+    final isEmpty = useState(true);
 
-    bool emptyFields() {
-      return emailController.text.isEmpty || passwordController.text.isEmpty;
+    void updateState() {
+      isEmpty.value =
+          emailController.text.isEmpty || passwordController.text.isEmpty;
     }
+
+    useEffect(() {
+      emailController.addListener(updateState);
+      passwordController.addListener(updateState);
+      updateState();
+
+      return () {
+        emailController.removeListener(updateState);
+        passwordController.removeListener(updateState);
+      };
+    }, []);
 
     return Form(
       key: formKey,
@@ -26,25 +40,26 @@ class LoginForm extends HookConsumerWidget {
             controller: emailController,
             hint: context.s.email,
           ),
-          SizedBox(height: 24),
+          AppDefaults.gap24,
           CustomTextFormField(
             controller: passwordController,
             obscureText: true,
             hint: context.s.password,
           ),
-          SizedBox(height: 54),
+          AppDefaults.gap60,
           AbsorbPointer(
-            absorbing: emptyFields(),
+            absorbing: isEmpty.value,
             child: SizedBox(
-              width: double.maxFinite,
+              width: double.infinity,
               child: BeanGoButton(
-                variant: emptyFields()
+                variant: isEmpty.value
                     ? CustomElevatedVariant.subtle
                     : CustomElevatedVariant.primary,
-                  text: context.s.login,
-                  onPressed: () {
-                    //TODO: Implement login
-                  }),
+                text: context.s.login,
+                onPressed: () {
+                  // TODO: Implement login
+                },
+              ),
             ),
           ),
         ],
