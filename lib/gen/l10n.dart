@@ -389,6 +389,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Continue with Google`
+  String get continue_with_google {
+    return Intl.message(
+      'Continue with Google',
+      name: 'continue_with_google',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continue with Apple`
+  String get continue_with_apple {
+    return Intl.message(
+      'Continue with Apple',
+      name: 'continue_with_apple',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Don't have an account?`
+  String get dont_have_an_acount {
+    return Intl.message(
+      'Don\'t have an account?',
+      name: 'dont_have_an_acount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Have an account?`
+  String get have_an_account {
+    return Intl.message(
+      'Have an account?',
+      name: 'have_an_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Register`
+  String get register {
+    return Intl.message(
+      'Register',
+      name: 'register',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

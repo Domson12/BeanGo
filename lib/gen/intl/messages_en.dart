@@ -22,14 +22,22 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "continue_with_apple":
+            MessageLookupByLibrary.simpleMessage("Continue with Apple"),
+        "continue_with_google":
+            MessageLookupByLibrary.simpleMessage("Continue with Google"),
         "create_an_account":
             MessageLookupByLibrary.simpleMessage("Create an account"),
+        "dont_have_an_acount":
+            MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "emailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
             "This email is already registered."),
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
         "get_started": MessageLookupByLibrary.simpleMessage("Get Started"),
         "google": MessageLookupByLibrary.simpleMessage("Google"),
+        "have_an_account":
+            MessageLookupByLibrary.simpleMessage("Have an account?"),
         "invalidEmail": MessageLookupByLibrary.simpleMessage(
             "The email address is not valid."),
         "light": MessageLookupByLibrary.simpleMessage("Light"),
@@ -49,6 +57,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "or_create_account": MessageLookupByLibrary.simpleMessage(
             ", or create a new account today!"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "register": MessageLookupByLibrary.simpleMessage("Register"),
         "sign_in": MessageLookupByLibrary.simpleMessage("Sign in"),
         "sign_in_with": MessageLookupByLibrary.simpleMessage("Sign in with"),
         "tooManyRequests": MessageLookupByLibrary.simpleMessage(

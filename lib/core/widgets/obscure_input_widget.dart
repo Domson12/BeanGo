@@ -15,7 +15,7 @@ class ObscureInputWidget extends StatelessWidget {
     return IconButton(
       icon: Icon(
         obscureTextState.value ? Icons.visibility : Icons.visibility_off,
-        color: context.colors.background,
+        color: context.colors.primaryMain,
         size: 24,
       ),
       onPressed: () {

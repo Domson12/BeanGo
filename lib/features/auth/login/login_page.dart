@@ -2,6 +2,7 @@ import "package:auto_route/annotations.dart";
 import "package:bean_go/core/utils/defaults.dart";
 import "package:bean_go/core/utils/extensions.dart";
 import "package:bean_go/features/auth/login/widgets/login_form.dart";
+import "package:bean_go/features/auth/widgets/auth_login_register_text.dart";
 import "package:flutter/material.dart";
 
 import "../../../gen/assets.gen.dart";
@@ -14,24 +15,38 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Padding(
-        padding: AppDefaults.paddingHorizontal16,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Assets.images.logo.image(),
-            Text(
-              context.s.welcome_back,
-              style: context.textTheme.displayLarge,
-            ),
-            AppDefaults.gap16,
-            Text(
-              context.s.login_to_your_account,
-              style: context.textTheme.displaySmall,
-            ),
-            const SizedBox(height: 100),
-            LoginForm(),
-          ],
+      resizeToAvoidBottomInset: true,
+      body: SafeArea(
+        child: LayoutBuilder(
+          builder: (context, constraints) {
+            return SingleChildScrollView(
+              padding: EdgeInsets.only(
+                bottom: MediaQuery.of(context).viewInsets.bottom,
+              ),
+              child: ConstrainedBox(
+                constraints: BoxConstraints(minHeight: constraints.maxHeight),
+                child: IntrinsicHeight(
+                  child: Padding(
+                    padding: AppDefaults.paddingHorizontal16,
+                    child: Column(
+                      children: [
+                        AppDefaults.gap32,
+                        Assets.images.logo.image(),
+                        AppDefaults.gap32,
+                        const LoginForm(),
+                        const Spacer(),
+                        AuthLoginRegisterText(
+                          isLogin: true,
+                          onTap: () {},
+                        ),
+                        AppDefaults.gap16,
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            );
+          },
         ),
       ),
     );

@@ -17,19 +17,15 @@ class AuthTextInfo extends StatelessWidget {
             fontFamily: 'Poppins',
           ),
           children: [
+            TextSpan(text: '${context.s.sign_in_with} '),
             TextSpan(
-              text: context.s.sign_in_with,
-            ),
-            TextSpan(
-              text: context.s.google,
+              text: '${context.s.google} ',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: context.colors.primaryMain,
               ),
             ),
-            TextSpan(
-              text: context.s.or,
-            ),
+            TextSpan(text: '${context.s.or} '),
             TextSpan(
               text: context.s.facebook,
               style: TextStyle(
@@ -37,9 +33,7 @@ class AuthTextInfo extends StatelessWidget {
                 color: context.colors.primaryMain,
               ),
             ),
-            TextSpan(
-              text: context.s.or_create_account,
-            ),
+            TextSpan(text: context.s.or_create_account),
           ],
         ),
       ),

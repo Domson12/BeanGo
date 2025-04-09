@@ -37,7 +37,7 @@ class BeanGoButton extends StatelessWidget {
     };
 
     final foregroundColor = switch (variant) {
-      CustomElevatedVariant.subtle => context.colors.outline,
+      CustomElevatedVariant.subtle => context.colors.white,
       CustomElevatedVariant.accent => context.colors.outline,
       _ => null,
     };

@@ -1,4 +1,4 @@
-import 'package:bean_go/core/widgets/bean_go_button.dart';
+import 'package:bean_go/core/utils/extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -14,20 +14,31 @@ class GoogleButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BeanGoButton(
-      text: 'Continue with Google',
-      leading: Padding(
-        padding: const EdgeInsets.only(bottom: 4),
-        child: SvgPicture.asset(
-          Assets.svg.googleIcon,
-          height: 24,
-          colorFilter: const ColorFilter.mode(
-            Colors.black,
-            BlendMode.srcIn,
-          ),
+    return ElevatedButton(
+      onPressed: onTap,
+      style: ElevatedButton.styleFrom(
+        elevation: 4,
+        backgroundColor: context.colors.white,
+        padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16),
         ),
       ),
-      onPressed: onTap,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          SvgPicture.asset(
+            Assets.svg.googleIcon,
+            height: 24,
+          ),
+         Spacer(),
+          Text(
+            context.s.continue_with_google,
+            style: context.textTheme.bodyMedium,
+          ),
+          Spacer(),
+        ],
+      ),
     );
   }
 }

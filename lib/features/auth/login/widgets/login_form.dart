@@ -14,11 +14,18 @@ class LoginForm extends HookConsumerWidget {
     final emailController = useTextEditingController();
     final passwordController = useTextEditingController();
 
+    bool emptyFields() {
+      return emailController.text.isEmpty || passwordController.text.isEmpty;
+    }
+
     return Form(
       key: formKey,
       child: Column(
         children: [
-          CustomTextFormField(controller: emailController, hint: context.s.email),
+          CustomTextFormField(
+            controller: emailController,
+            hint: context.s.email,
+          ),
           SizedBox(height: 24),
           CustomTextFormField(
             controller: passwordController,
@@ -26,11 +33,19 @@ class LoginForm extends HookConsumerWidget {
             hint: context.s.password,
           ),
           SizedBox(height: 54),
-          SizedBox(
-            width: double.maxFinite,
-            child: BeanGoButton(text: context.s.login, onPressed:() {
-              //TODO: Implement login
-            }),
+          AbsorbPointer(
+            absorbing: emptyFields(),
+            child: SizedBox(
+              width: double.maxFinite,
+              child: BeanGoButton(
+                variant: emptyFields()
+                    ? CustomElevatedVariant.subtle
+                    : CustomElevatedVariant.primary,
+                  text: context.s.login,
+                  onPressed: () {
+                    //TODO: Implement login
+                  }),
+            ),
           ),
         ],
       ),

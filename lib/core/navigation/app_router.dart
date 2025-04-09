@@ -15,16 +15,17 @@ class AppRouter extends RootStackRouter {
         AutoRoute(page: OnboardingRoute.page, initial: true),
         CustomRoute(
           page: AuthRoute.page,
+          durationInMilliseconds: 450,
           transitionsBuilder: (
             BuildContext context,
             Animation<double> animation,
             Animation<double> secondaryAnimation,
             Widget child,
           ) {
-            return FadeTransition(
-              opacity: animation,
-              child: child,
-            );
+          return FadeTransition(
+            opacity: animation,
+            child: child,
+          );
           },
         ),
         AutoRoute(page: LoginRoute.page),

@@ -34,5 +34,10 @@
   "google": "Google",
   "or": "or",
   "facebook": "Facebook",
-  "or_create_account": ", or create a new account today!"
+  "or_create_account": ", or create a new account today!",
+  "continue_with_google": "Continue with Google",
+  "continue_with_apple": "Continue with Apple",
+  "dont_have_an_acount": "Don't have an account?",
+  "have_an_account": "Have an account?",
+  "register": "Register"
 }
