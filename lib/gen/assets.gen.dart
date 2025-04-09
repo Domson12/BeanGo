@@ -22,6 +22,13 @@ class $AssetsFontsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/coffee_cup.png
+  AssetGenImage get coffeeCup =>
+      const AssetGenImage('assets/images/coffee_cup.png');
+
+  /// File path: assets/images/logo.png
+  AssetGenImage get logo => const AssetGenImage('assets/images/logo.png');
+
   /// File path: assets/images/onboarding.png
   AssetGenImage get onboarding =>
       const AssetGenImage('assets/images/onboarding.png');
@@ -39,14 +46,28 @@ class $AssetsImagesGen {
 
   /// List of all assets
   List<AssetGenImage> get values =>
-      [onboarding, onboarding2, onboarding3, splash];
+      [coffeeCup, logo, onboarding, onboarding2, onboarding3, splash];
+}
+
+class $AssetsSvgGen {
+  const $AssetsSvgGen();
+
+  /// File path: assets/svg/apple_icon.svg
+  String get appleIcon => 'assets/svg/apple_icon.svg';
+
+  /// File path: assets/svg/google_icon.svg
+  String get googleIcon => 'assets/svg/google_icon.svg';
+
+  /// List of all assets
+  List<String> get values => [appleIcon, googleIcon];
 }
 
 class Assets {
-  Assets._();
+  const Assets._();
 
   static const $AssetsFontsGen fonts = $AssetsFontsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
+  static const $AssetsSvgGen svg = $AssetsSvgGen();
 }
 
 class AssetGenImage {
@@ -82,7 +103,7 @@ class AssetGenImage {
     bool gaplessPlayback = true,
     bool isAntiAlias = false,
     String? package,
-    FilterQuality filterQuality = FilterQuality.low,
+    FilterQuality filterQuality = FilterQuality.medium,
     int? cacheWidth,
     int? cacheHeight,
   }) {

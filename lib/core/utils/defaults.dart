@@ -20,6 +20,8 @@ class AppDefaults {
   static const SizedBox gap16 = SizedBox(height: 16);
   static const SizedBox gap20 = SizedBox(height: 20);
   static const SizedBox gap24 = SizedBox(height: 24);
+  static const SizedBox gap32 = SizedBox(height: 32);
+  static const SizedBox gap60 = SizedBox(height: 60);
   static const SizedBox gapH8 = SizedBox(width: 8);
   static const SizedBox gapH16 = SizedBox(width: 16);
 

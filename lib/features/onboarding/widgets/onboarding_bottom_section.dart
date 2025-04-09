@@ -1,4 +1,5 @@
 import 'package:bean_go/core/utils/defaults.dart';
+import 'package:bean_go/core/utils/extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -8,10 +9,12 @@ class OnboardingBottomSection extends ConsumerStatefulWidget {
   const OnboardingBottomSection({
     super.key,
     required this.controller,
+    required this.onPressed,
     required this.count,
   });
 
   final PageController controller;
+  final VoidCallback onPressed;
   final int count;
 
   @override
@@ -32,6 +35,8 @@ class _OnboardingBottomSectionState
           controller: widget.controller,
           count: widget.count,
           effect: WormEffect(
+            dotHeight: 10,
+            dotWidth: 15,
             activeDotColor: Theme.of(context).colorScheme.primary,
           ),
         ),
@@ -46,10 +51,8 @@ class _OnboardingBottomSectionState
             child: isLastPage
                 ? FilledButton(
                     key: const ValueKey('get_started'),
-                    onPressed: () {
-                      // TODO: Navigate to the next screen
-                    },
-                    child: const Text('Get Started'),
+                    onPressed: widget.onPressed,
+                    child: Text(context.s.get_started),
                   )
                 : TextButton(
                     style: TextButton.styleFrom(
@@ -63,7 +66,8 @@ class _OnboardingBottomSectionState
                         curve: Curves.easeIn,
                       );
                     },
-                    child: const Text('Next'),
+                    child: Text(context.s.next),
+
                   ),
           ),
         ),

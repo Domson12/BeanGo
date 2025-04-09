@@ -21,6 +21,8 @@ abstract class AppColors {
 
   Color get white;
 
+  Color get black;
+
   Color get errorMain;
 
   Color get backgroundPrimary;

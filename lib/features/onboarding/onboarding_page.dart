@@ -1,8 +1,10 @@
 import 'package:auto_route/annotations.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:bean_go/core/utils/defaults.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../core/navigation/app_router.dart';
 import '../../core/widgets/onboarding_data.dart';
 import '../../core/utils/extensions.dart';
 import 'widgets/onboarding_bottom_section.dart';
@@ -101,6 +103,13 @@ class _OnboardingPageState extends ConsumerState<OnboardingPage> {
               child: OnboardingBottomSection(
                 controller: _controller,
                 count: items.length,
+                onPressed: () {
+                  context.router.replaceAll(
+                    const [
+                      AuthRoute(),
+                    ],
+                  );
+                },
               ),
             ),
           ),

@@ -1,5 +1,5 @@
 // DO NOT EDIT. This is code generated via package:intl/generate_localized.dart
-// This is a library that provides messages for a pl locale. All the
+// This is a library that provides messages for a en locale. All the
 // messages from the main program should be duplicated here with the same
 // function name.
 
@@ -18,7 +18,7 @@ final messages = new MessageLookup();
 typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 
 class MessageLookup extends MessageLookupByLibrary {
-  String get localeName => 'pl';
+  String get localeName => 'en';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -30,62 +30,48 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Create an account"),
         "dont_have_an_acount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
-        "email": MessageLookupByLibrary.simpleMessage("E-mail"),
+        "email": MessageLookupByLibrary.simpleMessage("Email"),
         "emailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
-            "Ten adres e-mail jest już używany."),
+            "This email is already registered."),
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
         "get_started": MessageLookupByLibrary.simpleMessage("Get Started"),
         "google": MessageLookupByLibrary.simpleMessage("Google"),
         "have_an_account":
             MessageLookupByLibrary.simpleMessage("Have an account?"),
         "invalidEmail": MessageLookupByLibrary.simpleMessage(
-            "Adres e-mail jest nieprawidłowy."),
-        "light": MessageLookupByLibrary.simpleMessage("Jasny"),
-        "login": MessageLookupByLibrary.simpleMessage("Zaloguj się"),
+            "The email address is not valid."),
+        "light": MessageLookupByLibrary.simpleMessage("Light"),
+        "login": MessageLookupByLibrary.simpleMessage("Login"),
         "login_to_your_account":
-            MessageLookupByLibrary.simpleMessage("Zaloguj się na swoje konto"),
+            MessageLookupByLibrary.simpleMessage("Login to your account"),
         "networkError": MessageLookupByLibrary.simpleMessage(
-            "Błąd sieci. Sprawdź swoje połączenie."),
+            "Network error. Check your connection."),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
         "onboarding_desc_big": MessageLookupByLibrary.simpleMessage(
             "Fall in Love with Coffee in Blissful Delight!"),
         "onboarding_desc_small": MessageLookupByLibrary.simpleMessage(
             "Welcome to our cozy coffee corner, where every cup is a delightful for you."),
-        "onboarding_subtitle1": MessageLookupByLibrary.simpleMessage(
-            "Customize your own drink exactly how you like it by adding any topping you like!!!"),
-        "onboarding_subtitle2": MessageLookupByLibrary.simpleMessage(
-            "You can place your order quickly and easly without wasting time. You can also schedule orders via your smarthphone."),
-        "onboarding_subtitle3": MessageLookupByLibrary.simpleMessage(
-            "Exciting prizes await you! Redeem yours by collecting all the points after purchase in the app!"),
-        "onboarding_title1": MessageLookupByLibrary.simpleMessage(
-            "Choose and customize your Drinks"),
-        "onboarding_title2":
-            MessageLookupByLibrary.simpleMessage("Quickly and easly"),
-        "onboarding_title3":
-            MessageLookupByLibrary.simpleMessage("Get and Redeem Voucher"),
         "operationNotAllowed": MessageLookupByLibrary.simpleMessage(
-            "Ta operacja nie jest dozwolona."),
+            "This operation is not allowed."),
         "or": MessageLookupByLibrary.simpleMessage("or"),
         "or_create_account": MessageLookupByLibrary.simpleMessage(
             ", or create a new account today!"),
-        "password": MessageLookupByLibrary.simpleMessage("Hasło"),
+        "password": MessageLookupByLibrary.simpleMessage("Password"),
         "register": MessageLookupByLibrary.simpleMessage("Register"),
-        "sign_in": MessageLookupByLibrary.simpleMessage("Zaloguj się"),
+        "sign_in": MessageLookupByLibrary.simpleMessage("Sign in"),
         "sign_in_with": MessageLookupByLibrary.simpleMessage("Sign in with"),
-        "skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "tooManyRequests": MessageLookupByLibrary.simpleMessage(
-            "Zbyt wiele prób. Spróbuj ponownie później."),
+            "Too many requests. Try again later."),
         "unknownError": MessageLookupByLibrary.simpleMessage(
-            "Wystąpił nieznany błąd. Spróbuj ponownie."),
+            "An unknown error occurred. Please try again."),
         "userDisabled": MessageLookupByLibrary.simpleMessage(
-            "To konto zostało zablokowane."),
+            "This user has been disabled."),
         "userNotFound": MessageLookupByLibrary.simpleMessage(
-            "Nie znaleziono użytkownika z tym adresem e-mail."),
+            "No user found with this email."),
         "weakPassword":
-            MessageLookupByLibrary.simpleMessage("Hasło jest zbyt słabe."),
-        "welcome_back":
-            MessageLookupByLibrary.simpleMessage("Witamy ponownie!"),
+            MessageLookupByLibrary.simpleMessage("The password is too weak."),
+        "welcome_back": MessageLookupByLibrary.simpleMessage("Welcome Back!"),
         "wrongPassword": MessageLookupByLibrary.simpleMessage(
-            "Nieprawidłowe hasło. Spróbuj ponownie.")
+            "Incorrect password. Please try again.")
       };
 }

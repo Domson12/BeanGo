@@ -50,6 +50,106 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `Adres e-mail jest nieprawidłowy.`
+  String get invalidEmail {
+    return Intl.message(
+      'Adres e-mail jest nieprawidłowy.',
+      name: 'invalidEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `To konto zostało zablokowane.`
+  String get userDisabled {
+    return Intl.message(
+      'To konto zostało zablokowane.',
+      name: 'userDisabled',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Nie znaleziono użytkownika z tym adresem e-mail.`
+  String get userNotFound {
+    return Intl.message(
+      'Nie znaleziono użytkownika z tym adresem e-mail.',
+      name: 'userNotFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Nieprawidłowe hasło. Spróbuj ponownie.`
+  String get wrongPassword {
+    return Intl.message(
+      'Nieprawidłowe hasło. Spróbuj ponownie.',
+      name: 'wrongPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ten adres e-mail jest już używany.`
+  String get emailAlreadyInUse {
+    return Intl.message(
+      'Ten adres e-mail jest już używany.',
+      name: 'emailAlreadyInUse',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ta operacja nie jest dozwolona.`
+  String get operationNotAllowed {
+    return Intl.message(
+      'Ta operacja nie jest dozwolona.',
+      name: 'operationNotAllowed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hasło jest zbyt słabe.`
+  String get weakPassword {
+    return Intl.message(
+      'Hasło jest zbyt słabe.',
+      name: 'weakPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Zbyt wiele prób. Spróbuj ponownie później.`
+  String get tooManyRequests {
+    return Intl.message(
+      'Zbyt wiele prób. Spróbuj ponownie później.',
+      name: 'tooManyRequests',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Błąd sieci. Sprawdź swoje połączenie.`
+  String get networkError {
+    return Intl.message(
+      'Błąd sieci. Sprawdź swoje połączenie.',
+      name: 'networkError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wystąpił nieznany błąd. Spróbuj ponownie.`
+  String get unknownError {
+    return Intl.message(
+      'Wystąpił nieznany błąd. Spróbuj ponownie.',
+      name: 'unknownError',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Jasny`
   String get light {
     return Intl.message(
@@ -159,6 +259,187 @@ class S {
       args: [],
     );
   }
+
+  /// `E-mail`
+  String get email {
+    return Intl.message(
+      'E-mail',
+      name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hasło`
+  String get password {
+    return Intl.message(
+      'Hasło',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Zaloguj się`
+  String get login {
+    return Intl.message(
+      'Zaloguj się',
+      name: 'login',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Witamy ponownie!`
+  String get welcome_back {
+    return Intl.message(
+      'Witamy ponownie!',
+      name: 'welcome_back',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Zaloguj się na swoje konto`
+  String get login_to_your_account {
+    return Intl.message(
+      'Zaloguj się na swoje konto',
+      name: 'login_to_your_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Zaloguj się`
+  String get sign_in {
+    return Intl.message(
+      'Zaloguj się',
+      name: 'sign_in',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create an account`
+  String get create_an_account {
+    return Intl.message(
+      'Create an account',
+      name: 'create_an_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next`
+  String get next {
+    return Intl.message(
+      'Next',
+      name: 'next',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign in with`
+  String get sign_in_with {
+    return Intl.message(
+      'Sign in with',
+      name: 'sign_in_with',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Google`
+  String get google {
+    return Intl.message(
+      'Google',
+      name: 'google',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `or`
+  String get or {
+    return Intl.message(
+      'or',
+      name: 'or',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Facebook`
+  String get facebook {
+    return Intl.message(
+      'Facebook',
+      name: 'facebook',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `, or create a new account today!`
+  String get or_create_account {
+    return Intl.message(
+      ', or create a new account today!',
+      name: 'or_create_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continue with Google`
+  String get continue_with_google {
+    return Intl.message(
+      'Continue with Google',
+      name: 'continue_with_google',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continue with Apple`
+  String get continue_with_apple {
+    return Intl.message(
+      'Continue with Apple',
+      name: 'continue_with_apple',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Don't have an account?`
+  String get dont_have_an_acount {
+    return Intl.message(
+      'Don\'t have an account?',
+      name: 'dont_have_an_acount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Have an account?`
+  String get have_an_account {
+    return Intl.message(
+      'Have an account?',
+      name: 'have_an_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Register`
+  String get register {
+    return Intl.message(
+      'Register',
+      name: 'register',
+      desc: '',
+      args: [],
+    );
+  }
+
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
@@ -167,6 +448,7 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
   List<Locale> get supportedLocales {
     return const <Locale>[
       Locale.fromSubtags(languageCode: 'pl'),
+      Locale.fromSubtags(languageCode: 'en'),
     ];
   }
 
