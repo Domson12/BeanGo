@@ -67,6 +67,7 @@ class _OnboardingBottomSectionState
                       );
                     },
                     child: Text(context.s.next),
+
                   ),
           ),
         ),
