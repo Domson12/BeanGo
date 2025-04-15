@@ -5,24 +5,24 @@ import 'package:flutter/material.dart';
 String getFirebaseAuthErrorMessage(BuildContext context, FirebaseAuthException e) {
   switch (e.code) {
     case 'invalid-email':
-      return context.s.invalidEmail;
+      return context.s.invalid_email;
     case 'user-disabled':
-      return context.s.userDisabled;
+      return context.s.user_disabled;
     case 'user-not-found':
-      return context.s.userNotFound;
+      return context.s.user_not_found;
     case 'wrong-password':
-      return context.s.wrongPassword;
+      return context.s.wrong_password;
     case 'email-already-in-use':
-      return context.s.emailAlreadyInUse;
+      return context.s.email_already_in_use;
     case 'operation-not-allowed':
-      return context.s.operationNotAllowed;
+      return context.s.operation_not_allowed;
     case 'weak-password':
-      return context.s.weakPassword;
+      return context.s.weak_password;
     case 'too-many-requests':
-      return context.s.tooManyRequests;
+      return context.s.too_many_requests;
     case 'network-request-failed':
-      return context.s.networkError;
+      return context.s.network_error;
     default:
-      return context.s.unknownError;
+      return context.s.unknown_error;
   }
 }

@@ -1,8 +1,8 @@
+import 'package:bean_go/core/widgets/result_wrapper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-
 
 import 'core/locale/locale_provider.dart';
 import 'core/navigation/navigation_provider.dart';
@@ -23,7 +23,6 @@ Future<void> runMainApp() async {
       ..logError(error.stack.toString());
   };
 
-
   runApp(
     UncontrolledProviderScope(
       container: container,
@@ -31,7 +30,6 @@ Future<void> runMainApp() async {
     ),
   );
 }
-
 
 class MainApp extends ConsumerWidget {
   const MainApp({super.key});
@@ -48,7 +46,7 @@ class MainApp extends ConsumerWidget {
       routerDelegate: ref.watch(appRouterProvider).delegate(),
       routeInformationParser: ref.watch(appRouterProvider).defaultRouteParser(),
       routeInformationProvider:
-      ref.watch(appRouterProvider).routeInfoProvider(),
+          ref.watch(appRouterProvider).routeInfoProvider(),
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: ref.watch(appThemeStateNotifier).themeMode,
@@ -59,6 +57,9 @@ class MainApp extends ConsumerWidget {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
+      builder: (context, child) {
+        return ResultWrapper(child: child);
+      },
       supportedLocales: S.delegate.supportedLocales,
     );
   }
