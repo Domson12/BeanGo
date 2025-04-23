@@ -101,6 +101,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "privacy_policy":
             MessageLookupByLibrary.simpleMessage("Privacy Policy"),
         "register": MessageLookupByLibrary.simpleMessage("Register"),
+        "registration_successful":
+            MessageLookupByLibrary.simpleMessage("Registration successful"),
         "sign_in": MessageLookupByLibrary.simpleMessage("Sign in"),
         "sign_in_with": MessageLookupByLibrary.simpleMessage("Sign in with"),
         "terms_of_use": MessageLookupByLibrary.simpleMessage("Terms of Use"),

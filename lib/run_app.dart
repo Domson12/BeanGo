@@ -1,4 +1,4 @@
-import 'package:bean_go/core/widgets/result_wrapper.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -6,15 +6,21 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'core/locale/locale_provider.dart';
 import 'core/navigation/navigation_provider.dart';
+import 'core/providers/global_providers.dart';
 import 'core/theme/app_theme.dart';
 import 'core/theme/theme_provider.dart';
 import 'core/utils/custom_logger.dart';
+import 'firebase_options.dart';
 import 'gen/l10n.dart';
 
 final logger = CustomLogger();
 
 Future<void> runMainApp() async {
   final container = ProviderContainer(overrides: []);
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 
   FlutterError.onError = (error) {
     logger
@@ -57,9 +63,7 @@ class MainApp extends ConsumerWidget {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      builder: (context, child) {
-        return ResultWrapper(child: child);
-      },
+      scaffoldMessengerKey: ref.watch(scaffoldMessengerProvider).key,
       supportedLocales: S.delegate.supportedLocales,
     );
   }

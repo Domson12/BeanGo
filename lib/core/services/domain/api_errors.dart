@@ -1,5 +1,3 @@
-import 'package:equatable/equatable.dart';
-
 import '../../../gen/l10n.dart';
 
 enum APIErrors {
@@ -118,17 +116,9 @@ extension GetErrorByName<T extends Enum> on Iterable<APIErrors> {
   }
 }
 
-sealed class ResultMessage with EquatableMixin {
-  const ResultMessage({required this.description});
-
+sealed class ResultMessage {
   final String description;
-
-  @override
-  List<Object?> get props => [description];
-}
-
-class NeutralMessage extends ResultMessage {
-  const NeutralMessage({required super.description});
+  const ResultMessage({required this.description});
 }
 
 class SuccessMessage extends ResultMessage {
@@ -138,3 +128,9 @@ class SuccessMessage extends ResultMessage {
 class ErrorMessage extends ResultMessage {
   const ErrorMessage({required super.description});
 }
+
+class InfoMessage extends ResultMessage {
+  const InfoMessage({required super.description});
+}
+
+

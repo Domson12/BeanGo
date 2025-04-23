@@ -6,11 +6,13 @@ part 'register_model.g.dart';
 class RegisterModel {
   RegisterModel({
     required this.email,
+    required this.password,
     required this.name,
   });
 
   Map<String, dynamic> toJson() => _$RegisterModelToJson(this);
 
   final String email;
+  final String password;
   final String name;
 }

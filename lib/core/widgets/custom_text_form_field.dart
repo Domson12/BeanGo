@@ -9,6 +9,7 @@ import 'obscure_input_widget.dart';
 class CustomTextFormField extends HookWidget {
   const CustomTextFormField({
     required this.controller,
+    this.keyboardType,
     this.hint,
     this.validator,
     this.obscureText = false,
@@ -41,6 +42,7 @@ class CustomTextFormField extends HookWidget {
   final int? maxLength;
   final TextCapitalization textCapitalization;
   final bool buildCounter;
+  final TextInputType? keyboardType;
 
   @override
   Widget build(BuildContext context) {
@@ -100,6 +102,7 @@ class CustomTextFormField extends HookWidget {
           key: key,
           focusNode: focusNode,
           textCapitalization: textCapitalization,
+          keyboardType: keyboardType,
           style: context.textTheme.labelMedium?.copyWith(
             height: 1.2,
             fontWeight: FontWeight.w400,
@@ -132,7 +135,6 @@ class CustomTextFormField extends HookWidget {
                 (obscureText
                     ? ObscureInputWidget(obscureTextState: obscureTextState)
                     : null),
-            fillColor: hasError.value ? context.colors.errorMain : null,
             filled: true,
             contentPadding: const EdgeInsets.symmetric(
               horizontal: 16,

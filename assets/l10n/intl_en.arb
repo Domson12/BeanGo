@@ -56,5 +56,6 @@
   "password_too_long": "Password must be at most 20 characters long",
   "password_requirements": "Password must contain at least one uppercase letter, one lowercase letter, one digit, and one special character",
   "password_confirmation_empty": "Password confirmation cannot be empty",
-  "passwords_do_not_match": "Passwords do not match"
+  "passwords_do_not_match": "Passwords do not match",
+  "registration_successful": "Registration successful"
 }

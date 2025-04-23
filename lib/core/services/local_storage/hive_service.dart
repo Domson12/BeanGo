@@ -1,7 +1,7 @@
 import 'package:hive/hive.dart';
 import 'package:path_provider/path_provider.dart';
-import '../../features/dashboard/domain/settings_model.dart';
-import '../../run_app.dart';
+import '../../../features/dashboard/domain/settings_model.dart';
+import '../../../run_app.dart';
 
 enum HiveBoxName { settings }
 

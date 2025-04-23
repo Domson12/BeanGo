@@ -4,7 +4,7 @@ import 'package:hive/hive.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../../core/locale/locale_provider.dart';
-import '../../../core/services/hive_service.dart';
+import '../../../core/services/local_storage/hive_service.dart';
 import '../../../core/theme/theme_provider.dart';
 import 'settings_model.dart';
 

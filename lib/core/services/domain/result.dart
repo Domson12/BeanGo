@@ -1,25 +1,11 @@
-import 'package:flutter/cupertino.dart';
-
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'api_errors.dart';
 
-class Result<T> {
-  Result({this.success, this.failure});
+part 'result.freezed.dart';
 
-  Result.failure({String? error}) {
-    debugPrint('Error: $error');
-    this.failure = APIErrors.values.errorByName(error ?? '');
-    this.success = null;
-  }
-
-  Result.failureError({APIErrors? error}) {
-    this.failure = error;
-    this.success = null;
-  }
-
-  Result.success({T? model}) {
-    this.success = model;
-  }
-
-  T? success;
-  APIErrors? failure;
+@freezed
+class Result<T> with _$Result<T> {
+  const factory Result.success(T value) = Success<T>;
+  const factory Result.failure(APIErrors error) = Failure<T>;
+  const factory Result.idle() = Idle<T>;
 }

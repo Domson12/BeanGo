@@ -113,9 +113,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "privacy_policy":
             MessageLookupByLibrary.simpleMessage("Privacy Policy"),
         "register": MessageLookupByLibrary.simpleMessage("Register"),
+        "registration_successful":
+            MessageLookupByLibrary.simpleMessage("Registration successful"),
         "sign_in": MessageLookupByLibrary.simpleMessage("Zaloguj się"),
         "sign_in_with": MessageLookupByLibrary.simpleMessage("Sign in with"),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
+        "success_login_message":
+            MessageLookupByLibrary.simpleMessage("Successfully logged in"),
         "terms_of_use": MessageLookupByLibrary.simpleMessage("Terms of Use"),
         "too_many_requests": MessageLookupByLibrary.simpleMessage(
             "Too many requests. Please try again later."),

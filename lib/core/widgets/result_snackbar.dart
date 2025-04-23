@@ -1,33 +1,41 @@
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
-import 'package:bean_go/core/services/domain/api_errors.dart';
+import 'package:bean_go/core/utils/result_extensions.dart';
 import 'package:flutter/material.dart';
+
 import '../../gen/l10n.dart';
 import '../services/domain/result.dart';
 
-SnackBar resultSnackbar<T>({
+SnackBar? resultSnackbar<T>({
   required Result<T> result,
   required String successMessage,
   String? fallbackErrorMessage,
   String? customSuccessTitle,
 }) {
+
+  final message = result.toMessage(
+    successMessage: successMessage,
+    fallbackErrorMessage: fallbackErrorMessage,
+    customSuccessTitle: customSuccessTitle,
+  );
+
+  if (message == null) {
+    return null;
+  }
+
+  final type = message.runtimeType.toString();
+
   late final ContentType contentType;
   late final String title;
-  late final String message;
 
-  if (result.success != null) {
+  if (type.contains('SuccessMessage')) {
     contentType = ContentType.success;
     title = customSuccessTitle ?? S.current.operation_success;
-    message = successMessage;
-  } else if (result.failure != null) {
+  } else if (type.contains('ErrorMessage')) {
     contentType = ContentType.failure;
     title = S.current.error;
-    message = result.failure?.message ??
-        fallbackErrorMessage ??
-        S.current.error_generic;
   } else {
     contentType = ContentType.warning;
-    title = S.current.error;
-    message = S.current.error_generic;
+    title = S.current.unknown_error;
   }
 
   return SnackBar(
@@ -36,7 +44,7 @@ SnackBar resultSnackbar<T>({
     backgroundColor: Colors.transparent,
     content: AwesomeSnackbarContent(
       title: title,
-      message: message,
+      message: message.description,
       contentType: contentType,
     ),
   );

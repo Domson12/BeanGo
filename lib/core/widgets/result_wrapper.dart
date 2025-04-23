@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import '../services/domain/result.dart';
-import 'result_snackbar.dart';
 
 class ResultWrapper extends StatefulWidget {
   final Widget? child;
@@ -18,20 +16,6 @@ class ResultWrapper extends StatefulWidget {
 class ResultWrapperState extends State<ResultWrapper> {
   final GlobalKey<ScaffoldMessengerState> _messengerKey =
       GlobalKey<ScaffoldMessengerState>();
-
-  void showResult<T>({
-    required Result<T> result,
-    required String successMessage,
-  }) {
-    final snackBar = resultSnackbar(
-      result: result,
-      successMessage: successMessage,
-    );
-
-    _messengerKey.currentState
-      ?..hideCurrentSnackBar()
-      ..showSnackBar(snackBar);
-  }
 
   @override
   Widget build(BuildContext context) {

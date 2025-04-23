@@ -1,10 +1,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:bean_go/features/onboarding/onboarding_page.dart';
-import 'package:bean_go/features/auth/login/login_page.dart';
+import 'package:bean_go/features/auth/login/presentation/login_page.dart';
 import 'package:flutter/material.dart';
 
 import '../../features/auth/auth_page.dart';
-import '../../features/auth/register/register_page.dart';
+import '../../features/auth/register/presentation/register_page.dart';
 part 'app_router.gr.dart';
 
 @AutoRouterConfig(
