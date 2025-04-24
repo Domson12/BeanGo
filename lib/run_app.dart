@@ -1,20 +1,26 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-
 import 'core/locale/locale_provider.dart';
 import 'core/navigation/navigation_provider.dart';
+import 'core/providers/global_providers.dart';
 import 'core/theme/app_theme.dart';
 import 'core/theme/theme_provider.dart';
 import 'core/utils/custom_logger.dart';
+import 'firebase_options.dart';
 import 'gen/l10n.dart';
 
 final logger = CustomLogger();
 
 Future<void> runMainApp() async {
   final container = ProviderContainer(overrides: []);
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 
   FlutterError.onError = (error) {
     logger
@@ -23,7 +29,6 @@ Future<void> runMainApp() async {
       ..logError(error.stack.toString());
   };
 
-
   runApp(
     UncontrolledProviderScope(
       container: container,
@@ -31,7 +36,6 @@ Future<void> runMainApp() async {
     ),
   );
 }
-
 
 class MainApp extends ConsumerWidget {
   const MainApp({super.key});
@@ -48,7 +52,7 @@ class MainApp extends ConsumerWidget {
       routerDelegate: ref.watch(appRouterProvider).delegate(),
       routeInformationParser: ref.watch(appRouterProvider).defaultRouteParser(),
       routeInformationProvider:
-      ref.watch(appRouterProvider).routeInfoProvider(),
+          ref.watch(appRouterProvider).routeInfoProvider(),
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: ref.watch(appThemeStateNotifier).themeMode,
@@ -59,6 +63,7 @@ class MainApp extends ConsumerWidget {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
+      scaffoldMessengerKey: ref.watch(scaffoldMessengerProvider).key,
       supportedLocales: S.delegate.supportedLocales,
     );
   }

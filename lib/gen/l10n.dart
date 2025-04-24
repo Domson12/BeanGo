@@ -50,101 +50,41 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Adres e-mail jest nieprawidłowy.`
-  String get invalidEmail {
+  /// `The email address is not valid.`
+  String get invalid_email {
     return Intl.message(
-      'Adres e-mail jest nieprawidłowy.',
-      name: 'invalidEmail',
+      'The email address is not valid.',
+      name: 'invalid_email',
       desc: '',
       args: [],
     );
   }
 
-  /// `To konto zostało zablokowane.`
-  String get userDisabled {
+  /// `This operation is not allowed.`
+  String get operation_not_allowed {
     return Intl.message(
-      'To konto zostało zablokowane.',
-      name: 'userDisabled',
+      'This operation is not allowed.',
+      name: 'operation_not_allowed',
       desc: '',
       args: [],
     );
   }
 
-  /// `Nie znaleziono użytkownika z tym adresem e-mail.`
-  String get userNotFound {
+  /// `Network error. Check your connection.`
+  String get network_error {
     return Intl.message(
-      'Nie znaleziono użytkownika z tym adresem e-mail.',
-      name: 'userNotFound',
+      'Network error. Check your connection.',
+      name: 'network_error',
       desc: '',
       args: [],
     );
   }
 
-  /// `Nieprawidłowe hasło. Spróbuj ponownie.`
-  String get wrongPassword {
+  /// `An unknown error occurred. Please try again.`
+  String get unknown_error {
     return Intl.message(
-      'Nieprawidłowe hasło. Spróbuj ponownie.',
-      name: 'wrongPassword',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Ten adres e-mail jest już używany.`
-  String get emailAlreadyInUse {
-    return Intl.message(
-      'Ten adres e-mail jest już używany.',
-      name: 'emailAlreadyInUse',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Ta operacja nie jest dozwolona.`
-  String get operationNotAllowed {
-    return Intl.message(
-      'Ta operacja nie jest dozwolona.',
-      name: 'operationNotAllowed',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Hasło jest zbyt słabe.`
-  String get weakPassword {
-    return Intl.message(
-      'Hasło jest zbyt słabe.',
-      name: 'weakPassword',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Zbyt wiele prób. Spróbuj ponownie później.`
-  String get tooManyRequests {
-    return Intl.message(
-      'Zbyt wiele prób. Spróbuj ponownie później.',
-      name: 'tooManyRequests',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Błąd sieci. Sprawdź swoje połączenie.`
-  String get networkError {
-    return Intl.message(
-      'Błąd sieci. Sprawdź swoje połączenie.',
-      name: 'networkError',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Wystąpił nieznany błąd. Spróbuj ponownie.`
-  String get unknownError {
-    return Intl.message(
-      'Wystąpił nieznany błąd. Spróbuj ponownie.',
-      name: 'unknownError',
+      'An unknown error occurred. Please try again.',
+      name: 'unknown_error',
       desc: '',
       args: [],
     );
@@ -485,6 +425,276 @@ class S {
     return Intl.message(
       'Privacy Policy',
       name: 'privacy_policy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `User not found. Please check your email and try again.`
+  String get user_not_found {
+    return Intl.message(
+      'User not found. Please check your email and try again.',
+      name: 'user_not_found',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Incorrect password. Please try again.`
+  String get wrong_password {
+    return Intl.message(
+      'Incorrect password. Please try again.',
+      name: 'wrong_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid login credentials. Please try again.`
+  String get invalid_login_credentials {
+    return Intl.message(
+      'Invalid login credentials. Please try again.',
+      name: 'invalid_login_credentials',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid credentials. Please try again.`
+  String get invalid_credential {
+    return Intl.message(
+      'Invalid credentials. Please try again.',
+      name: 'invalid_credential',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An error occurred while processing your request. Please try again later.`
+  String get blocking_cloud_function_returned_error {
+    return Intl.message(
+      'An error occurred while processing your request. Please try again later.',
+      name: 'blocking_cloud_function_returned_error',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email already in use. Please try another one.`
+  String get email_already_in_use {
+    return Intl.message(
+      'Email already in use. Please try another one.',
+      name: 'email_already_in_use',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Expired action code. Please try again.`
+  String get expired_action_code {
+    return Intl.message(
+      'Expired action code. Please try again.',
+      name: 'expired_action_code',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid action code. Please try again.`
+  String get invalid_action_code {
+    return Intl.message(
+      'Invalid action code. Please try again.',
+      name: 'invalid_action_code',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `User is disabled. Please contact support.`
+  String get user_disabled {
+    return Intl.message(
+      'User is disabled. Please contact support.',
+      name: 'user_disabled',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `User is disabled. Please contact support.`
+  String get user_disabled_android {
+    return Intl.message(
+      'User is disabled. Please contact support.',
+      name: 'user_disabled_android',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The password is too weak. Please choose a stronger password.`
+  String get weak_password {
+    return Intl.message(
+      'The password is too weak. Please choose a stronger password.',
+      name: 'weak_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An internal error occurred. Please try again later.`
+  String get internal_error {
+    return Intl.message(
+      'An internal error occurred. Please try again later.',
+      name: 'internal_error',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Location services are disabled. Please enable them in settings.`
+  String get location_disabled {
+    return Intl.message(
+      'Location services are disabled. Please enable them in settings.',
+      name: 'location_disabled',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Too many requests. Please try again later.`
+  String get too_many_requests {
+    return Intl.message(
+      'Too many requests. Please try again later.',
+      name: 'too_many_requests',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unknown error occurred.`
+  String get error_generic {
+    return Intl.message(
+      'Unknown error occurred.',
+      name: 'error_generic',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Error`
+  String get error {
+    return Intl.message(
+      'Error',
+      name: 'error',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Operacja wykonana pomyślnie!`
+  String get operation_success {
+    return Intl.message(
+      'Operacja wykonana pomyślnie!',
+      name: 'operation_success',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email nie może być pusty`
+  String get email_empty {
+    return Intl.message(
+      'Email nie może być pusty',
+      name: 'email_empty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wprowadź poprawny adres email`
+  String get incorrect_email {
+    return Intl.message(
+      'Wprowadź poprawny adres email',
+      name: 'incorrect_email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pasword cannot be empty`
+  String get pasword_cannot_be_empty {
+    return Intl.message(
+      'Pasword cannot be empty',
+      name: 'pasword_cannot_be_empty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password must be at least 6 characters long`
+  String get password_too_short {
+    return Intl.message(
+      'Password must be at least 6 characters long',
+      name: 'password_too_short',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password must be at most 20 characters long`
+  String get password_too_long {
+    return Intl.message(
+      'Password must be at most 20 characters long',
+      name: 'password_too_long',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password must contain at least one uppercase letter, one lowercase letter, one digit, and one special character`
+  String get password_requirements {
+    return Intl.message(
+      'Password must contain at least one uppercase letter, one lowercase letter, one digit, and one special character',
+      name: 'password_requirements',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password confirmation cannot be empty`
+  String get password_confirmation_empty {
+    return Intl.message(
+      'Password confirmation cannot be empty',
+      name: 'password_confirmation_empty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Passwords do not match`
+  String get passwords_do_not_match {
+    return Intl.message(
+      'Passwords do not match',
+      name: 'passwords_do_not_match',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Successfully logged in`
+  String get success_login_message {
+    return Intl.message(
+      'Successfully logged in',
+      name: 'success_login_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Registration successful`
+  String get registration_successful {
+    return Intl.message(
+      'Registration successful',
+      name: 'registration_successful',
       desc: '',
       args: [],
     );

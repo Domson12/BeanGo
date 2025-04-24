@@ -1,11 +1,13 @@
 import "package:auto_route/annotations.dart";
+import "package:auto_route/auto_route.dart";
+import "package:bean_go/core/navigation/app_router.dart";
 import "package:bean_go/core/utils/defaults.dart";
 import "package:bean_go/core/utils/extensions.dart";
 import "package:bean_go/features/auth/login/widgets/login_form.dart";
 import "package:bean_go/features/auth/widgets/auth_login_register_text.dart";
 import "package:flutter/material.dart";
 
-import "../../../gen/assets.gen.dart";
+import "../../../../gen/assets.gen.dart";
 
 @RoutePage()
 class LoginPage extends StatelessWidget {
@@ -37,7 +39,11 @@ class LoginPage extends StatelessWidget {
                         const Spacer(),
                         AuthLoginRegisterText(
                           isLogin: true,
-                          onTap: () {},
+                          onTap: () {
+                            context.router.replace(
+                              RegisterRoute(),
+                            );
+                          },
                         ),
                         AppDefaults.gap16,
                       ],
