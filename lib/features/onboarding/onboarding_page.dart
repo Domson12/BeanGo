@@ -1,14 +1,14 @@
-import 'package:auto_route/annotations.dart';
 import 'package:auto_route/auto_route.dart';
-import 'package:bean_go/core/utils/defaults.dart';
+import 'package:bean_go/features/onboarding/widgets/onboarding_bottom_section.dart';
+import 'package:bean_go/features/onboarding/widgets/onboarding_content.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../../core/navigation/app_router.dart';
-import '../../core/widgets/onboarding_data.dart';
-import '../../core/utils/extensions.dart';
-import 'widgets/onboarding_bottom_section.dart';
-import 'widgets/onboarding_content.dart';
+import '../../../core/navigation/app_router.dart';
+import '../../../core/utils/defaults.dart';
+import '../../../core/utils/extensions.dart';
+import '../../../core/widgets/onboarding_data.dart';
+import '../../../core/providers/global_providers.dart';
 import 'application/onboarding_controller.dart';
 
 @RoutePage()
@@ -103,11 +103,15 @@ class _OnboardingPageState extends ConsumerState<OnboardingPage> {
               child: OnboardingBottomSection(
                 controller: _controller,
                 count: items.length,
-                onPressed: () {
-                  context.router.replaceAll(
-                    const [
-                      AuthRoute(),
-                    ],
+                onPressed: () async {
+                  final prefsService = ref.read(sharedPrefsServiceProvider);
+                  await prefsService.setOnboardingComplete();
+
+                  WidgetsBinding.instance.addPostFrameCallback(
+                    (_) {
+                      if (!mounted) return;
+                      context.router.replaceAll(const [AuthRoute()]);
+                    },
                   );
                 },
               ),

@@ -130,6 +130,26 @@ class AppTheme {
       color: colors.primaryDark,
     ),
     scaffoldBackgroundColor: colors.white,
+    navigationBarTheme: NavigationBarThemeData(
+      labelTextStyle: WidgetStateProperty.resolveWith<TextStyle>(
+            (Set<WidgetState> states) {
+          if (states.contains(WidgetState.selected)) {
+            return TextStyle(
+              fontSize: 10,
+              fontWeight: FontWeight.w600,
+              fontFamily: AppTheme.appFont,
+              color: colors.primaryMain,
+            );
+          }
+          return TextStyle(
+            fontSize: 10,
+            fontWeight: FontWeight.w400,
+            fontFamily: AppTheme.appFont,
+            color: colors.outline,
+          );
+        },
+      ),
+    ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         padding: const EdgeInsets.all(16),

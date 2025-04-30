@@ -40,7 +40,7 @@ class LoginPage extends StatelessWidget {
                         AuthLoginRegisterText(
                           isLogin: true,
                           onTap: () {
-                            context.router.replace(
+                            context.router.navigate(
                               RegisterRoute(),
                             );
                           },

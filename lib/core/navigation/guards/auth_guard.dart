@@ -13,14 +13,12 @@ class AuthGuard extends AutoRouteGuard {
   void onNavigation(NavigationResolver resolver, StackRouter router) {
     final user = ref.read(authStateProvider).value;
 
+    print('AuthGuard: user: $user');
+    
     if (user != null) {
       resolver.next(true);
     } else {
-      router.replaceAll(
-        [
-          const LoginRoute(),
-        ],
-      );
+      router.replaceAll([const AuthRoute()]);
     }
   }
 }
