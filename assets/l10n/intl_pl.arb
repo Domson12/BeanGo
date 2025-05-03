@@ -65,5 +65,12 @@
   "password_confirmation_empty": "Password confirmation cannot be empty",
   "passwords_do_not_match": "Passwords do not match",
   "success_login_message": "Successfully logged in",
-  "registration_successful": "Registration successful"
+  "registration_successful": "Registration successful",
+  "profile": "Profile",
+  "history": "History",
+  "home": "Home",
+  "searchbar_hint": "What would you like to drink today?",
+  "coffee": "Coffee",
+  "non_coffee": "Non Coffee",
+  "pastry": "Pastry"
 }

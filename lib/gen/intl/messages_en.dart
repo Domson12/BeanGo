@@ -28,6 +28,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "An error occurred while processing your request. Please try again later."),
         "by_taping_register": MessageLookupByLibrary.simpleMessage(
             "By tapping \"Register\" you agree to"),
+        "coffee": MessageLookupByLibrary.simpleMessage("Coffee"),
         "confirm_password":
             MessageLookupByLibrary.simpleMessage("Confirm Password"),
         "continue_with_apple":
@@ -53,6 +54,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "google": MessageLookupByLibrary.simpleMessage("Google"),
         "have_an_account":
             MessageLookupByLibrary.simpleMessage("Have an account?"),
+        "history": MessageLookupByLibrary.simpleMessage("History"),
+        "home": MessageLookupByLibrary.simpleMessage("Home"),
         "incorrect_email": MessageLookupByLibrary.simpleMessage(
             "Wprowadź poprawny adres email"),
         "internal_error": MessageLookupByLibrary.simpleMessage(
@@ -74,6 +77,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "network_error": MessageLookupByLibrary.simpleMessage(
             "Network error. Check your connection."),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
+        "non_coffee": MessageLookupByLibrary.simpleMessage("Non Coffee"),
         "onboarding_desc_big": MessageLookupByLibrary.simpleMessage(
             "Fall in Love with Coffee in Blissful Delight!"),
         "onboarding_desc_small": MessageLookupByLibrary.simpleMessage(
@@ -96,13 +100,17 @@ class MessageLookup extends MessageLookupByLibrary {
             "Password must be at least 6 characters long"),
         "passwords_do_not_match":
             MessageLookupByLibrary.simpleMessage("Passwords do not match"),
+        "pastry": MessageLookupByLibrary.simpleMessage("Pastry"),
         "pasword_cannot_be_empty":
             MessageLookupByLibrary.simpleMessage("Pasword cannot be empty"),
         "privacy_policy":
             MessageLookupByLibrary.simpleMessage("Privacy Policy"),
+        "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "register": MessageLookupByLibrary.simpleMessage("Register"),
         "registration_successful":
             MessageLookupByLibrary.simpleMessage("Registration successful"),
+        "searchbar_hint": MessageLookupByLibrary.simpleMessage(
+            "What would you like to drink today?"),
         "sign_in": MessageLookupByLibrary.simpleMessage("Sign in"),
         "sign_in_with": MessageLookupByLibrary.simpleMessage("Sign in with"),
         "terms_of_use": MessageLookupByLibrary.simpleMessage("Terms of Use"),
