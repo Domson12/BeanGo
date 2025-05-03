@@ -28,11 +28,13 @@ class AppColorsLight implements AppColors {
   Color get outline => const Color(0xFFE3E3E3);
 
   @override
+  Color get disabled => const Color(0xFFBDBDBD);
+
+  @override
   Color get background => const Color(0xFFF9F2ED);
 
   @override
   Color get white => const Color(0xFFFFFFFF);
-
 
   @override
   Color get black => const Color(0xFF000000);

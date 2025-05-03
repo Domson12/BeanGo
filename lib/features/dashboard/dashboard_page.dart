@@ -1,4 +1,3 @@
-import 'package:auto_route/annotations.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:bean_go/core/navigation/app_router.dart';
 import 'package:bean_go/core/utils/extensions.dart';
@@ -14,6 +13,7 @@ class DashboardPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AutoTabsRouter.pageView(
+      physics: NeverScrollableScrollPhysics(),
       routes: const [
         HomeRoute(),
         HistoryRoute(),
@@ -22,66 +22,95 @@ class DashboardPage extends StatelessWidget {
       builder: (context, child, controller) {
         return Scaffold(
           body: child,
-          bottomNavigationBar: NavigationBar(
-            indicatorColor: Colors.transparent,
-            labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
-            selectedIndex: context.tabsRouter.activeIndex,
-            onDestinationSelected: (int index) {
-              context.tabsRouter.setActiveIndex(index);
-            },
-            destinations: [
-              NavigationDestination(
-                icon: SvgPicture.asset(
-                  Assets.svg.fiHome,
-                  colorFilter: ColorFilter.mode(
-                    context.colors.outline,
-                    BlendMode.srcIn,
-                  ),
-                ),
-                label: 'Home',
-                selectedIcon: SvgPicture.asset(
-                  Assets.svg.fiHome,
-                  colorFilter: ColorFilter.mode(
-                    context.colors.primaryMain,
-                    BlendMode.srcIn,
-                  ),
+          bottomNavigationBar: Container(
+            decoration: BoxDecoration(
+              color: Colors.white,
+              border: Border(
+                top: BorderSide(
+                  color: context.colors.outline,
+                  width: 1,
                 ),
               ),
-              NavigationDestination(
-                icon: SvgPicture.asset(
-                  Assets.svg.order,
-                  colorFilter: ColorFilter.mode(
-                    context.colors.outline,
-                    BlendMode.srcIn,
-                  ),
-                ),
-                label: 'History',
-                selectedIcon: SvgPicture.asset(
-                  Assets.svg.order,
-                  colorFilter: ColorFilter.mode(
-                    context.colors.primaryMain,
-                    BlendMode.srcIn,
-                  ),
-                ),
+              borderRadius: const BorderRadius.only(
+                topLeft: Radius.circular(16),
+                topRight: Radius.circular(16),
               ),
-              NavigationDestination(
-                icon: SvgPicture.asset(
-                  Assets.svg.fiUserAltLight,
-                  colorFilter: ColorFilter.mode(
-                    context.colors.outline,
-                    BlendMode.srcIn,
-                  ),
+              boxShadow: [
+                BoxShadow(
+                  color: context.colors.outline,
+                  blurRadius: 8,
+                  offset: const Offset(0, -2),
                 ),
-                label: 'Profile',
-                selectedIcon: SvgPicture.asset(
-                  Assets.svg.fiUserAltLight,
-                  colorFilter: ColorFilter.mode(
-                    context.colors.primaryMain,
-                    BlendMode.srcIn,
-                  ),
-                ),
+              ],
+            ),
+            child: ClipRRect(
+              borderRadius: const BorderRadius.only(
+                topLeft: Radius.circular(24),
+                topRight: Radius.circular(24),
               ),
-            ],
+              child: NavigationBar(
+                indicatorColor: Colors.transparent,
+                labelBehavior:
+                    NavigationDestinationLabelBehavior.onlyShowSelected,
+                selectedIndex: context.tabsRouter.activeIndex,
+                onDestinationSelected: (int index) {
+                  context.tabsRouter.setActiveIndex(index);
+                },
+                destinations: [
+                  NavigationDestination(
+                    icon: SvgPicture.asset(
+                      Assets.svg.fiHome,
+                      colorFilter: ColorFilter.mode(
+                        context.colors.outline,
+                        BlendMode.srcIn,
+                      ),
+                    ),
+                    label: context.s.home,
+                    selectedIcon: SvgPicture.asset(
+                      Assets.svg.fiHome,
+                      colorFilter: ColorFilter.mode(
+                        context.colors.primaryMain,
+                        BlendMode.srcIn,
+                      ),
+                    ),
+                  ),
+                  NavigationDestination(
+                    icon: SvgPicture.asset(
+                      Assets.svg.order,
+                      colorFilter: ColorFilter.mode(
+                        context.colors.outline,
+                        BlendMode.srcIn,
+                      ),
+                    ),
+                    label: context.s.history,
+                    selectedIcon: SvgPicture.asset(
+                      Assets.svg.order,
+                      colorFilter: ColorFilter.mode(
+                        context.colors.primaryMain,
+                        BlendMode.srcIn,
+                      ),
+                    ),
+                  ),
+                  NavigationDestination(
+                    icon: SvgPicture.asset(
+                      Assets.svg.fiUserAltLight,
+                      colorFilter: ColorFilter.mode(
+                        context.colors.outline,
+                        BlendMode.srcIn,
+                      ),
+                    ),
+                    label: context.s.profile,
+                    selectedIcon: SvgPicture.asset(
+                      Assets.svg.fiUserAltLight,
+                      colorFilter: ColorFilter.mode(
+                        context.colors.primaryMain,
+                        BlendMode.srcIn,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ),
         );
       },

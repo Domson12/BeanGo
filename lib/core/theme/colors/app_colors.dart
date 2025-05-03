@@ -17,6 +17,8 @@ abstract class AppColors {
 
   Color get outline;
 
+  Color get disabled;
+
   Color get background;
 
   Color get white;
